@@ -197,6 +197,8 @@ export class ItemValue extends Base {
     };
     if (text) this.locText.text = text;
     if (!!value && typeof value === "object") {
+      this.imageLink = value.imageLink;
+      this.description = value.description;
       this.setData(value);
     } else {
       this.value = value;

@@ -36,32 +36,55 @@ export class SurveyNavigation extends SurveyNavigationBase {
     if (!this.survey || this.survey.isNavigationButtonsShowing === "none")
       return null;
     var isStartedPage = this.survey.state === "starting";
+    // var prevButton =
+    //   !isStartedPage && !this.survey.isFirstPage && this.survey.isShowPrevButton
+    //     ? this.renderButton(
+    //         this.handlePrevClick,
+    //         null,
+    //         this.survey.pagePrevText,
+    //         this.css.navigation.prev
+    //       )
+    //     : null;
+
     var prevButton =
       !isStartedPage && !this.survey.isFirstPage && this.survey.isShowPrevButton
-        ? this.renderButton(
-            this.handlePrevClick,
-            null,
-            this.survey.pagePrevText,
-            this.css.navigation.prev
-          )
+        ? <div className="back-page-div" onClick={this.handlePrevClick}>
+          <i className="fa fa-chevron-left" />   Back
+          </div>
         : null;
+    // var nextButton =
+    //   !isStartedPage && !this.survey.isLastPage
+    //     ? this.renderButton(
+    //         this.handleNextClick,
+    //         this.handleNextMouseDown,
+    //         this.survey.pageNextText,
+    //         this.css.navigation.next
+    //       )
+    //     : null;
     var nextButton =
       !isStartedPage && !this.survey.isLastPage
-        ? this.renderButton(
-            this.handleNextClick,
-            this.handleNextMouseDown,
-            this.survey.pageNextText,
-            this.css.navigation.next
-          )
+        ? <div className="continue-btn-div">
+            <div className="continue-page-div" onClick={this.handleNextClick}>
+            Continue
+            </div>
+          </div>
         : null;
+    // var completeButton =
+    //   !isStartedPage && this.survey.isLastPage && this.survey.isEditMode
+    //     ? this.renderButton(
+    //         this.handleCompleteClick,
+    //         null,
+    //         this.survey.completeText,
+    //         this.css.navigation.complete
+    //       )
+    //     : null;
     var completeButton =
       !isStartedPage && this.survey.isLastPage && this.survey.isEditMode
-        ? this.renderButton(
-            this.handleCompleteClick,
-            null,
-            this.survey.completeText,
-            this.css.navigation.complete
-          )
+        ? <div className="complete-btn-div">
+          <div className="complete-page-div" onClick={this.handleCompleteClick}>
+              Complete
+              </div>
+          </div>
         : null;
     var startButton = isStartedPage
       ? this.renderButton(
@@ -72,7 +95,7 @@ export class SurveyNavigation extends SurveyNavigationBase {
         )
       : null;
     return (
-      <div className={this.css.footer}>
+      <div className={this.css.footer + " mirror-effect-footer"}>
         {startButton}
         {prevButton}
         {nextButton}

@@ -32,7 +32,7 @@ export class SurveyProgress extends SurveyNavigationBase {
           aria-valuemin={0}
           aria-valuemax={100}
         >
-          <span className={this.css.progressText}>{this.progressText}</span>
+          <span className={this.css.progressText}>{this.progressText.replace("Page ", "")}</span>
         </div>
       </div>
     );

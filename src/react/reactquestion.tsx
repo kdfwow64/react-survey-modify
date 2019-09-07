@@ -116,7 +116,7 @@ export class SurveyQuestion extends SurveyElementBase {
         style={rootStyle}
       >
         {headerTop}
-        <div className={contentClass}>
+        <div className={contentClass + " page-panel"}>
           {errorsTop}
           {questionRender}
           {comment}

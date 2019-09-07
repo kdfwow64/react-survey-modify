@@ -153,6 +153,14 @@ export class SurveyQuestionCheckboxItem extends ReactSurveyElement {
           : " sv-q-col-" + this.question.colCount;
     }
 
+    if (this.item.imageLink) {
+      if(this.item.description) {
+        itemClass += " image-checkbox-div";
+      } else {
+        itemClass += " image-no-description-checkbox-div";
+      }
+    }
+
     if (isChecked) itemClass += " checked";
     var onItemChanged =
       this.item == this.question.selectAllItem
@@ -163,33 +171,137 @@ export class SurveyQuestionCheckboxItem extends ReactSurveyElement {
 
     return (
       <div className={itemClass}>
-        <label className={this.cssClasses.label}>
-          <input
-            className={this.cssClasses.itemControl}
-            type="checkbox"
-            value={this.item.value}
-            id={id}
-            style={this.inputStyle}
-            disabled={this.isDisplayMode || !this.item.isEnabled}
-            checked={isChecked}
-            onChange={onItemChanged}
-            aria-required={this.question.isRequired}
-            aria-label={locText.renderedHtml}
-          />
-          <svg viewBox="0 0 24 24" className={this.cssClasses.itemDecorator}>
-            <path d="m5,14.519865l2,-2l3,3l7,-7l2,2l-9,9l-5,-5z" />
-          </svg>
-          <span className={this.cssClasses.materialDecorator}>
-            <span className="check" />
+        {
+          this.item.imageLink &&
+              this.item.description &&
+                <label className={this.cssClasses.label}>
+                  <div className="image-with-description-label-div">
+                    <div className="image-div-checkbox">
+                      <img className="checkbox-image" src={this.item.imageLink} />
+                    </div>
+                    <input
+                      className={this.cssClasses.itemControl}
+                      type="checkbox"
+                      value={this.item.value}
+                      id={id}
+                      style={this.inputStyle}
+                      disabled={this.isDisplayMode || !this.item.isEnabled}
+                      checked={isChecked}
+                      onChange={onItemChanged}
+                      aria-required={this.question.isRequired}
+                      aria-label={locText.renderedHtml}
+                    />
+                    <svg viewBox="0 0 24 24" className={this.cssClasses.itemDecorator + " display-none"}>
+                      <path d="m5,14.519865l2,-2l3,3l7,-7l2,2l-9,9l-5,-5z" />
+                    </svg>
+                    <span className={this.cssClasses.materialDecorator}>
+                      <span className="check" />
+                    </span>
+                    <span
+                      className={this.cssClasses.controlLabel + " display-none"}
+                      title={locText["koRenderedHtml"]}
+                    >
+                      {text}
+                    </span>
+                    <div className="image-with-description-txt-div">
+                      <div className="image-checkbox-big-txt">
+                        <span className="check-element-width">
+                          {
+                            locText.renderedHtml
+                          }
+                        </span>
+                      </div>
+                      <div className="image-checkbox-description">
+                        <span>
+                          {
+                            this.item.description
+                          }
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+        }
+        {
+          this.item.imageLink &&
+          !this.item.description &&
+            <label className={this.cssClasses.label}>
+              <div className="image-no-description-checkbox-div">
+                <div className="image-div-checkbox">
+                  <img className="checkbox-image" src={this.item.imageLink} />
+                </div>
+                <input
+                  className={this.cssClasses.itemControl}
+                  type="checkbox"
+                  value={this.item.value}
+                  id={id}
+                  style={this.inputStyle}
+                  disabled={this.isDisplayMode || !this.item.isEnabled}
+                  checked={isChecked}
+                  onChange={onItemChanged}
+                  aria-required={this.question.isRequired}
+                  aria-label={locText.renderedHtml}
+                />
+                <svg viewBox="0 0 24 24" className={this.cssClasses.itemDecorator + " display-none"}>
+                  <path d="m5,14.519865l2,-2l3,3l7,-7l2,2l-9,9l-5,-5z" />
+                </svg>
+                <span className={this.cssClasses.materialDecorator}>
+                  <span className="check" />
+                </span>
+                <span
+                  className={this.cssClasses.controlLabel + " display-none"}
+                  title={locText["koRenderedHtml"]}
+                >
+                  {text}
+                </span>
+              </div>
+            </label>
+        }
+        {
+          this.item.imageLink &&
+          !this.item.description &&
+          <span className="check-element-width">
+            {
+              locText.renderedHtml
+            }
           </span>
-          <span
-            className={this.cssClasses.controlLabel}
-            title={locText["koRenderedHtml"]}
-          >
-            {text}
-          </span>
-        </label>
-        {otherItem}
+        }
+        {
+          !this.item.imageLink &&
+          !this.item.description &&
+          <label className={this.cssClasses.label + " not-image"}>
+            <div className="no-image-no-description-checkbox" />
+            <input
+              className={this.cssClasses.itemControl}
+              type="checkbox"
+              value={this.item.value}
+              id={id}
+              style={this.inputStyle}
+              disabled={this.isDisplayMode || !this.item.isEnabled}
+              checked={isChecked}
+              onChange={onItemChanged}
+              aria-required={this.question.isRequired}
+              aria-label={locText.renderedHtml}
+            />
+            <svg viewBox="0 0 24 24" className={this.cssClasses.itemDecorator + " display-none"}>
+              <path d="m5,14.519865l2,-2l3,3l7,-7l2,2l-9,9l-5,-5z" />
+            </svg>
+            <span className={this.cssClasses.materialDecorator}>
+              <span className="check" />
+            </span>
+            <span
+              className={this.cssClasses.controlLabel + " display-none"}
+              title={locText["koRenderedHtml"]}
+            >
+              {text}
+            </span>
+            <span className="check-element-width">
+              {
+                locText.renderedHtml
+              }
+            </span>
+          </label>
+        }
       </div>
     );
   }
