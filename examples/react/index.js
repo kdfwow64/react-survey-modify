@@ -26,6 +26,7 @@ function init() {
           {
             "type": "radiogroup",
             "name": "radiogroup Image with Description",
+            "description": "This is subTitle",
             // "colCount": 1,
             "choices": [
               {

@@ -159,6 +159,8 @@ export class SurveyQuestionCheckboxItem extends ReactSurveyElement {
       } else {
         itemClass += " image-no-description-checkbox-div";
       }
+    } else {
+      itemClass += " no-image-no-description-checkbox-div";
     }
 
     if (isChecked) itemClass += " checked";
