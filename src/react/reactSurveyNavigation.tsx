@@ -61,8 +61,9 @@ export class SurveyNavigation extends SurveyNavigationBase {
     //         this.css.navigation.next
     //       )
     //     : null;
+    var ss = this.survey.currentPage.rows[0].elements[0];
     var nextButton =
-      !isStartedPage && !this.survey.isLastPage
+      !isStartedPage && !this.survey.isLastPage && ss.getType() !== "radiogroup"
         ? <div className="continue-btn-div">
             <div className="continue-page-div" onClick={this.handleNextClick}>
             Continue

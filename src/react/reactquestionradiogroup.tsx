@@ -158,6 +158,8 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
       } else {
         itemClass += " image-no-description-checkbox-div";
       }
+    } else {
+      itemClass += " no-image-no-description-checkbox-div";
     }
 
     if (this.isChecked) itemClass += " checked";
@@ -165,7 +167,7 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
     var locText: any = this.item.locText;
 
     return (
-      <div className={itemClass}>
+      <div className={itemClass + " radio-box-div"}>
         {
           this.item.imageLink &&
           this.item.description &&

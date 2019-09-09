@@ -19,6 +19,7 @@ function init() {
   Survey.FunctionFactory.Instance.register("getItemPrice", getItemPrice);
 
   var json = {
+    "goNextPageAutomatic": true,
     "pages": [
       {
         "name": "First Page",
@@ -108,12 +109,12 @@ function init() {
                 "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
               },
               {
-                "value": "3.fifth",
+                "value": "3.sixth",
                 "text": "Sixth",
                 "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
               },
               {
-                "value": "3.fifth",
+                "value": "3.seventh",
                 "text": "Seventh",
                 "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
               }
