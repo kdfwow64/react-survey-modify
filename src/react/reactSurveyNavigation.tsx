@@ -49,7 +49,7 @@ export class SurveyNavigation extends SurveyNavigationBase {
     var prevButton =
       !isStartedPage && !this.survey.isFirstPage && this.survey.isShowPrevButton
         ? <div className="back-page-div" onClick={this.handlePrevClick}>
-          <i className="fa fa-chevron-left" />   Back
+          <i className="fa fa-chevron-left" /><span>   Back</span>
           </div>
         : null;
     // var nextButton =

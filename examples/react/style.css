@@ -18,26 +18,23 @@ body {
   overflow: hidden;
 }
 
-/* .page-panel {
-  margin-left: 0;
-  margin-right: 0;
-}
-.page-panel.slide-left {
+
+.sv-row.slide-left {
   opacity: 0;
   margin-left: -100%;
   margin-right: 100%;
 }
-.page-panel.slide-right {
+.sv-row.slide-right {
   opacity: 0;
   margin-left: 100%;
   margin-right: -100%;
 }
-.page-panel.slide-in-show {
+.sv-row.slide-in-show {
   opacity: 1;
   margin-left: 0;
   margin-right: 0;
   transition: all 1.75s ease;
-} */
+}
 
 .sv-main {
   background-color: var(--page-bg-color) !important;
@@ -230,7 +227,7 @@ body {
   border: 3px solid var(--page-bg-color);
   transition-duration: 700ms;
 
-  margin-bottom: 15px !important;
+  margin: 15px !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -291,9 +288,9 @@ body {
   color: white;
   border: 3px solid rgb(241, 87, 75);
   background-color: rgb(241, 87, 75);
-  padding: 13.5px 18px;
+  padding: 13.5px 0px;
   border-radius: 100px;
-  width: 210px;
+  width: 200px;
   text-align: center;
 }
 
@@ -364,6 +361,10 @@ body {
   margin: 0;
 }
 
+.sv-body__page {
+    margin-bottom: 120px;
+}
+
 .sv-progress__bar {
   background-color: var(--default-color) !important;
   display: flex;
@@ -383,6 +384,16 @@ body {
 .image-with-description-txt-div {
     float: left;
 }
+.sv-question__title {
+  white-space: unset;
+}
+.sv-selectbase {
+  text-align: center;
+  max-width: 725px;
+}
+.sv-selectbase__item {
+  display: inline-block;
+}
 @media only screen and (max-width: 600px) {
 
     .page-panel {
@@ -390,6 +401,9 @@ body {
     }
     .sv-question__content {
         margin: 0 auto;
+    }
+    .sv-selectbase__column {
+        margin-right: 4px;
     }
     .image-checkbox-div >label img {
         width: 64px;
@@ -404,6 +418,10 @@ body {
     .image-div-checkbox {
         float: left;
         margin-right: 30px;
+    }
+
+    .image-no-description-checkbox-div .image-div-checkbox {
+        margin-right: 0;
     }
 
     .image-with-description-label-div {
@@ -426,6 +444,9 @@ body {
         float: left;
         width: 100%;
         text-align: left;
+    }
+    .back-page-div span {
+        display: none;
     }
 }
 

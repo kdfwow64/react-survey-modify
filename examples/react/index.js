@@ -26,7 +26,7 @@ function init() {
           {
             "type": "radiogroup",
             "name": "radiogroup Image with Description",
-            "colCount": 2,
+            // "colCount": 1,
             "choices": [
               {
                 "value": "1.first",
@@ -51,6 +51,24 @@ function init() {
                 "text": "Fourth",
                 "description": "This is the description",
                 "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.fifth",
+                "text": "Five",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.sixth",
+                "text": "Six",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.seventh",
+                "text": "Seven",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
               }
             ]
           }
@@ -62,7 +80,6 @@ function init() {
           {
             "type": "radiogroup",
             "name": "radiogroup with Image",
-            "colCount": 3,
             "choices": [
               {
                 "value": "2.first",
@@ -83,6 +100,21 @@ function init() {
                 "value": "3.fourth",
                 "text": "Fourth",
                 "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "3.fifth",
+                "text": "Fifth",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "3.fifth",
+                "text": "Sixth",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "3.fifth",
+                "text": "Seventh",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
               }
             ]
           }
@@ -94,7 +126,6 @@ function init() {
           {
             "type": "radiogroup",
             "name": "question233",
-            "colCount": 3,
             "choices": [
               {
                 "value": "3.first",
@@ -124,7 +155,6 @@ function init() {
           {
             "type": "checkbox",
             "name": "aaaadfa",
-            "colCount": 2,
             "choices": [
               {
                 "value": "item1",
