@@ -141,7 +141,9 @@ body {
   color: white;
   transition: all 1.75s ease;
 } */
-
+.sv-question {
+  overflow: unset !important;
+}
 .sv-question__content {
     margin: auto;
     width: fit-content;
@@ -366,8 +368,12 @@ body {
 }
 
 .sv-body__page {
-    margin-bottom: 120px;
-    margin-top: 100px;
+  margin-bottom: 120px;
+  margin-top: 100px;
+}
+
+.sv_container {
+  transition-duration: 400ms;
 }
 
 .sv-progress__bar {
@@ -488,4 +494,27 @@ body {
   font-family: "Font Awesome 5 Free";
   color: white;
   transition: all 1.75s ease;
+}
+
+
+.dialog-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.dialog-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+
+.dialog-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dialog-exit-active {
+  opacity: 0.01;
+  transform: scale(1.1);
+  transition: all 300ms;
 }

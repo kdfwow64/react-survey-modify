@@ -96,5 +96,6 @@
     "hooks": {
       "pre-push": "npm run testsingle"
     }
-  }
+  },
+  "dependencies": {}
 }

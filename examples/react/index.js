@@ -25,8 +25,63 @@ function init() {
         "name": "First Page",
         "elements": [
           {
-            "type": "radiogroup",
+            "type": "checkbox",
             "name": "radiogroup Image with Description",
+            "description": "This is subTitle",
+            // "colCount": 1,
+            "choices": [
+              {
+                "value": "1.first",
+                "text": "First",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/A1CmWWkvqSMK6WSAsIY46/3feb17797c68dc529b2a8876457dfe7e/ic_topic_sleep.svg?w=128&h=128"
+              },
+              {
+                "value": "1.second",
+                "text": "Second",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/6QKu30B8iWCK8UuOkG6o62/f6f9468d259035c1f5719db5948a2d5f/ic_topic_stress.svg?w=128&h=128"
+              },
+              {
+                "value": "1.third",
+                "text": "Third",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/5GiLyy5Ggw2iaGI08SEisi/793097f6c2a3ad18a6057c9961233869/ic_topic_fitness.svg?w=128&h=128"
+              },
+              {
+                "value": "1.fourth",
+                "text": "Fourth",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.fifth",
+                "text": "Five",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.sixth",
+                "text": "Six",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              },
+              {
+                "value": "1.seventh",
+                "text": "Seven",
+                "description": "This is the description",
+                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "First Page",
+        "elements": [
+          {
+            "type": "checkbox",
+            "name": "checkbox Image with Description",
             "description": "This is subTitle",
             // "colCount": 1,
             "choices": [
