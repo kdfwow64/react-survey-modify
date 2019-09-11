@@ -25,8 +25,39 @@ function init() {
         "name": "style",
         "elements": [
           {
-            "type": "radiogroup",
+            "type": "checkbox",
             "name": "q1",
+            "title": "the real question",
+            "description": "This is subTitle",
+            "choices": [
+              {
+                "value": "Comfy",
+                "text": "Comfy & Soft",
+                "description": 'Ultimate comfort',
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+              },
+              {
+                "value": "Stretchy & Seamless",
+                "text": "Stretchy & Seamless",
+                "description": "One style for all",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+              },
+              {
+                "value": "Lacy & Fancy",
+                "text": "Lacy & Fancy",
+                "description": "Look your best when you are half-naked",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ggg",
+        "elements": [
+          {
+            "type": "radiogroup",
+            "name": "assss",
             "title": "the real question",
             "description": "This is subTitle",
             "choices": [
@@ -64,7 +95,6 @@ function init() {
               {
                 "value": "2.first",
                 "text": "Classic Briefs",
-                "description": null,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
@@ -85,7 +115,6 @@ function init() {
               {
                 "value": "2.first",
                 "text": "Classic Briefs",
-                "description": null,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
@@ -105,7 +134,6 @@ function init() {
               }, {
                 "value": "2.first",
                 "text": "Classic Briefs",
-                "description": null,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
@@ -126,7 +154,6 @@ function init() {
               {
                 "value": "2.first",
                 "text": "Classic Briefs",
-                "description": null,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {

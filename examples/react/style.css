@@ -3,11 +3,14 @@
   --default-color: #3e306e;
 }
 
+
 body {
   margin: 0 !important;
   background-color: var(--page-bg-color);
 }
-
+.sv-row {
+  overflow: hidden;
+}
 .sv-question__header h5 {
   text-align: center !important;
   font-size: 38px !important;
@@ -22,6 +25,27 @@ body {
   overflow: hidden;
 }
 
+@keyframes move {
+  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+}
+
+@keyframes slide {
+  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+  }
+.sv-question {
+   /* animation: NAME-YOUR-ANIMATION 2s infinite; */
+   animation: move 2s forwards;
+}
+.sv-question.left-slide {
+   animation: slide 2s forwards;
+}
 
 .sv-row.slide-left {
   opacity: 0;
