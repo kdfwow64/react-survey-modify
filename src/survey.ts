@@ -2081,7 +2081,9 @@ export class SurveyModel extends Base
     var vPages = this.visiblePages;
     var index = vPages.indexOf(this.currentPage);
     this.currentPage = vPages[index - 1];
-    this.currentPage.css.question.mainRoot += " left-slide";
+    if (this.currentPage.css.question.mainRoot.indexOf("left-slide") === -1) {
+      this.currentPage.css.question.mainRoot += " left-slide";
+    }
   }
   /**
    * Call it to complete the survey, if the current page is the last one. It returns false if there is an error on the page. If there is no errors on the page, it calls doComplete and returns true.

@@ -56,7 +56,7 @@ function init() {
         "name": "ggg",
         "elements": [
           {
-            "type": "radiogroup",
+            "type": "checkbox",
             "name": "assss",
             "title": "the real question",
             "description": "This is subTitle",
