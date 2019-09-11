@@ -41,10 +41,10 @@ body {
   }
 .sv-question {
    /* animation: NAME-YOUR-ANIMATION 2s infinite; */
-   animation: move 2s forwards;
+   animation: move 1s forwards;
 }
 .sv-question.left-slide {
-   animation: slide 2s forwards;
+   animation: slide 1s forwards;
 }
 
 .sv-row.slide-left {

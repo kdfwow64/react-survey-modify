@@ -2311,6 +2311,7 @@ export class SurveyModel extends Base
       var vPages = this.visiblePages;
       var index = vPages.indexOf(this.currentPage);
       this.currentPage = vPages[index + 1];
+      this.currentPage.css.question.mainRoot = this.currentPage.css.question.mainRoot.replace(" left-slide", "");
       // this.currentPage.css.row = "sv-row";
       // setTimeout(
       //   function () {
