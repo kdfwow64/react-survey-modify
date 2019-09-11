@@ -86,7 +86,7 @@ body {
   display: flex;
   align-items: center;
   vertical-align: middle;
-  display: block;
+  display: flex;
 }
 
 .checked .not-image {
@@ -174,7 +174,7 @@ body {
 }
 .image-with-description-label-div {
     margin: 70px 40px;
-    display: flow-root;
+    display: grid;
 }
 .image-checkbox-description {
     max-width: 200px;
@@ -198,6 +198,11 @@ body {
   font-size: 24px;
   font-weight: 700;
   color: black;
+}
+
+.check-element-width {
+  white-space: normal;
+  width: calc(100% - 45px);
 }
 
 .image-checkbox-div .image-checkbox-description {
@@ -408,6 +413,7 @@ body {
 
 .no-image-no-description-checkbox-div {
   margin: 10px;
+  width: calc(50% - 20px);
 }
 @media only screen and (max-width: 600px) {
 
@@ -444,6 +450,7 @@ body {
     .image-with-description-label-div {
         margin: 15px;
         float: left;
+        display: unset;
     }
     .image-checkbox-big-txt {
         float: left;
@@ -464,6 +471,11 @@ body {
     }
     .back-page-div span {
         display: none;
+    }
+
+    .no-image-no-description-checkbox-div {
+      margin: 0;
+      width: calc(100% - 20px);
     }
 }
 

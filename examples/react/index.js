@@ -22,156 +22,127 @@ function init() {
     "goNextPageAutomatic": true,
     "pages": [
       {
-        "name": "First Page",
-        "elements": [
-          {
-            "type": "checkbox",
-            "name": "radiogroup Image with Description",
-            "description": "This is subTitle",
-            // "colCount": 1,
-            "choices": [
-              {
-                "value": "1.first",
-                "text": "First",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/A1CmWWkvqSMK6WSAsIY46/3feb17797c68dc529b2a8876457dfe7e/ic_topic_sleep.svg?w=128&h=128"
-              },
-              {
-                "value": "1.second",
-                "text": "Second",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/6QKu30B8iWCK8UuOkG6o62/f6f9468d259035c1f5719db5948a2d5f/ic_topic_stress.svg?w=128&h=128"
-              },
-              {
-                "value": "1.third",
-                "text": "Third",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/5GiLyy5Ggw2iaGI08SEisi/793097f6c2a3ad18a6057c9961233869/ic_topic_fitness.svg?w=128&h=128"
-              },
-              {
-                "value": "1.fourth",
-                "text": "Fourth",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.fifth",
-                "text": "Five",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.sixth",
-                "text": "Six",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.seventh",
-                "text": "Seven",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "First Page",
-        "elements": [
-          {
-            "type": "checkbox",
-            "name": "checkbox Image with Description",
-            "description": "This is subTitle",
-            // "colCount": 1,
-            "choices": [
-              {
-                "value": "1.first",
-                "text": "First",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/A1CmWWkvqSMK6WSAsIY46/3feb17797c68dc529b2a8876457dfe7e/ic_topic_sleep.svg?w=128&h=128"
-              },
-              {
-                "value": "1.second",
-                "text": "Second",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/6QKu30B8iWCK8UuOkG6o62/f6f9468d259035c1f5719db5948a2d5f/ic_topic_stress.svg?w=128&h=128"
-              },
-              {
-                "value": "1.third",
-                "text": "Third",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/5GiLyy5Ggw2iaGI08SEisi/793097f6c2a3ad18a6057c9961233869/ic_topic_fitness.svg?w=128&h=128"
-              },
-              {
-                "value": "1.fourth",
-                "text": "Fourth",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.fifth",
-                "text": "Five",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.sixth",
-                "text": "Six",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              },
-              {
-                "value": "1.seventh",
-                "text": "Seven",
-                "description": "This is the description",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Second Page",
+        "name": "style",
         "elements": [
           {
             "type": "radiogroup",
-            "name": "radiogroup with Image",
+            "name": "q1",
+            "title": "the real question",
+            "description": "This is subTitle",
+            "choices": [
+              {
+                "value": "Comfy",
+                "text": "Comfy & Soft",
+                "description": 'Ultimate comfort',
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+              },
+              {
+                "value": "Stretchy & Seamless",
+                "text": "Stretchy & Seamless",
+                "description": "One style for all",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+              },
+              {
+                "value": "Lacy & Fancy",
+                "text": "Lacy & Fancy",
+                "description": "Look your best when you are half-naked",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cut",
+        "visibleIf": "{q1} = \"Comfy\"",
+        "elements": [
+          {
+            "type": "checkbox",
+            "name": "What type of panty cuts do you prefer?",
+            "description": "This is subTitle",
             "choices": [
               {
                 "value": "2.first",
-                "text": "First",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/A1CmWWkvqSMK6WSAsIY46/3feb17797c68dc529b2a8876457dfe7e/ic_topic_sleep.svg?w=128&h=128"
+                "text": "Classic Briefs",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.second",
                 "text": "Second",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/6QKu30B8iWCK8UuOkG6o62/f6f9468d259035c1f5719db5948a2d5f/ic_topic_stress.svg?w=128&h=128"
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.third",
                 "text": "Third",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/5GiLyy5Ggw2iaGI08SEisi/793097f6c2a3ad18a6057c9961233869/ic_topic_fitness.svg?w=128&h=128"
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "3.fourth",
                 "text": "Fourth",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
-                "value": "3.fifth",
-                "text": "Fifth",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+                "value": "2.first",
+                "text": "Classic Briefs",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
-                "value": "3.sixth",
-                "text": "Sixth",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+                "value": "2.second",
+                "text": "Second",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
-                "value": "3.seventh",
-                "text": "Seventh",
-                "imageLink": "https://images.ctfassets.net/t9x0u6p47op0/371OPjK1x6mMuAkykg0mqO/2ddc0bf8e294da157f92993c10f62661/ic_topic_energy.svg?w=128&h=128"
+                "value": "2.third",
+                "text": "Third",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "3.fourth",
+                "text": "Fourth",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              }, {
+                "value": "2.first",
+                "text": "Classic Briefs",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.second",
+                "text": "Second",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.third",
+                "text": "Third",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "3.fourth",
+                "text": "Fourth",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.first",
+                "text": "Classic Briefs",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.second",
+                "text": "Second",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.third",
+                "text": "Third",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "3.fourth",
+                "text": "Fourth",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               }
             ]
           }
@@ -181,8 +152,9 @@ function init() {
         "name": "Checkbox with Image and Description",
         "elements": [
           {
-            "type": "radiogroup",
+            "type": "checkbox",
             "name": "question233",
+            "description": "This is subTitle",
             "choices": [
               {
                 "value": "3.first",
@@ -208,30 +180,33 @@ function init() {
       },
       {
         "name": "Checkbox with no image",
+
         "elements": [
           {
             "type": "checkbox",
-            "name": "aaaadfa",
+            "name": "In an average week, how often do you take powders?",
+            "description": "This is subTitle",
             "choices": [
               {
                 "value": "item1",
-                "text": "aaa"
+                "text": "Rarely"
               },
               {
                 "value": "item2",
-                "text": "aaa"
+                "text": "Couple days "
               },
               {
                 "value": "item3",
-                "text": "aaa"
+                "text": "Non-binary"
               }
             ]
           }
         ]
       }
     ],
-    "showProgressBar": "bottom",
-    "showQuestionNumbers": "off"
+    "showProgressBar": "top",
+    "showQuestionNumbers": "off",
+    "goNextPageAutomatic": true
   };
 
   Survey.StylesManager.applyTheme("bem");
