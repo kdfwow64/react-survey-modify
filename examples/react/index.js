@@ -22,10 +22,100 @@ function init() {
     "goNextPageAutomatic": true,
     "pages": [
       {
-        "name": "Checkbox with Image and Description",
+        "name": "style",
+        "elements": [
+          {
+            "type": "radiogroup",
+            "name": "q1",
+            "title": "How would you describe your \"heaven\" panty?",
+            "description": "",
+            "choices": [
+              {
+                "value": "Comfy",
+                "text": "Comfy & Soft",
+                "description": 'Comfort Sweet Comfort',
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+              },
+              {
+                "value": "Stretchy & Seamless",
+                "text": "Stretchy & Seamless",
+                "description": "Rock those tight pants",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+              },
+              {
+                "value": "Lacy & Fancy",
+                "text": "Lacy & Fancy",
+                "description": "Look your best when you are half-naked",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "cut",
+        // "visibleIf": "{q1} = \"Comfy\"",
         "elements": [
           {
             "type": "checkbox",
+            "name": "What type of panty cuts do you prefer?",
+            "choices": [
+              {
+                "value": "2.first",
+                "text": "Classic Briefs",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.second",
+                "text": "High Cut Briefs",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.third",
+                "text": "Control Briefs",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "3.fourth",
+                "text": "Hipsters",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.fifth",
+                "text": "Boyshorts",
+                "description": null,
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.sixth",
+                "text": "Bikinis",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.seventh",
+                "text": "Tangas",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "3.eighth",
+                "text": "G-Strings",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+              {
+                "value": "2.ninth",
+                "text": "Thohgs",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
+              },
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Checkbox with Image and Description",
+        "elements": [
+          {
+            "type": "radiogroup",
             "name": "question233",
             "description": "This is subTitle",
             "choices": [
@@ -53,7 +143,7 @@ function init() {
       },
       {
         "name": "Checkbox with no image",
-
+        "colCount": 1,
         "elements": [
           {
             "type": "checkbox",
@@ -62,15 +152,47 @@ function init() {
             "choices": [
               {
                 "value": "item1",
-                "text": "Rarely"
+                "text": "Small"
               },
               {
                 "value": "item2",
-                "text": "Couple days "
+                "text": "Meduim "
               },
               {
                 "value": "item3",
-                "text": "Non-binary"
+                "text": "Large"
+              },
+              {
+                "value": "item3",
+                "text": "X Large"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Checkbox with no image4",
+        "elements": [
+          {
+            "type": "checkbox",
+            "name": "1In an average week, how often do you take powders?",
+            "description": "This is subTitle",
+            "choices": [
+              {
+                "value": "item1",
+                "text": "Small"
+              },
+              {
+                "value": "item2",
+                "text": "Meduim "
+              },
+              {
+                "value": "item3",
+                "text": "Large"
+              },
+              {
+                "value": "item3",
+                "text": "X Large"
               }
             ]
           }
