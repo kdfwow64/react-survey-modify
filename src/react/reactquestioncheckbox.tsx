@@ -160,7 +160,7 @@ export class SurveyQuestionCheckboxItem extends ReactSurveyElement {
         itemClass += " image-no-description-checkbox-div";
       }
     } else {
-      itemClass += " no-image-no-description-checkbox-div";
+      itemClass += " image-checkbox-div no-im-no-desc";
     }
 
     if (isChecked) itemClass += " checked";

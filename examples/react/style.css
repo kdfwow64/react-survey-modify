@@ -35,33 +35,11 @@ body {
   to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
-@-webkit-keyframes NAME-YOUR-ANIMATION {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-  }
 .sv-question {
-   /* animation: NAME-YOUR-ANIMATION 2s infinite; */
    animation: move 1s forwards;
 }
 .sv-question.left-slide {
    animation: slide 1s forwards;
-}
-
-.sv-row.slide-left {
-  opacity: 0;
-  margin-left: -100%;
-  margin-right: 100%;
-}
-.sv-row.slide-right {
-  opacity: 0;
-  margin-left: 100%;
-  margin-right: -100%;
-}
-.sv-row.slide-in-show {
-  opacity: 1;
-  margin-left: 0;
-  margin-right: 0;
-  transition: all 1.75s ease;
 }
 
 .sv-main {
@@ -77,11 +55,6 @@ body {
 
 .sv-main .sv_custom_header {
   background-color: var(--page-bg-color);
-}
-
-.sv-main .sv_container .panel-footer {
-  /* background-color: var(--page-bg-color) !important; */
-  /* background: linear-gradient(to top, #f5f1ed 50%, rgba(245, 241, 237, 0) 100%) !important; */
 }
 
 .sv_qcbc {
@@ -134,37 +107,6 @@ body {
   margin-bottom: 80px;
 }
 
-/* .iradio_square-blue {
-  background: none;
-  border-radius: 50%;
-  border: 3px solid #f5f1ed;
-  transition-duration: 700ms;
-  width: 30px;
-  height: 30px;
-}
-
-.iradio_square-blue.hover {
-  border-color: var(--default-color);
-  transition-duration: 400ms;
-}
-
-.iradio_square-blue.checked {
-  transition-duration: 400ms;
-  border-color: var(--default-color);
-  background-color: var(--default-color);
-  text-align: center;
-}
-
-.not-image .iradio_square-blue.checked:before {
-  content: "\f00c";
-  transform: scale(0);
-  transition-duration: 400ms;
-  transition-property: transform, -webkit-transform;
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  color: white;
-  transition: all 1.75s ease;
-} */
 .sv-question {
   overflow: unset !important;
 }
@@ -438,6 +380,19 @@ body {
 .no-image-no-description-checkbox-div {
   margin: 10px;
   width: calc(50% - 20px);
+  text-align: center !important;
+  border-radius: 8px !important;
+  border-width: 4px !important;
+  background-color: white;
+  transition-duration: 700ms;
+  border: 4px solid var(--page-bg-color);
+}
+
+.no-im-no-desc {
+  border: none;
+  background: none;
+  width: calc(50% - 35px);
+  float: left;
 }
 @media only screen and (max-width: 600px) {
 
