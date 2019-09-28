@@ -244,9 +244,9 @@ $base-line-height: 2em;
     padding: 0 2em;
     border-radius: 2px;
 
-    &:hover {
-      //background-color: $main-hover-color;
-    }
+    // &:hover {
+    //   background-color: $main-hover-color;
+    // }
   }
 
   .sv_custom_header {
@@ -323,12 +323,12 @@ $base-line-height: 2em;
           //border-bottom: 1px solid $header-background-color;
           padding: 0;
 
-          &:nth-child(odd) {
-            //background-color: $body-background-color;
-          }
-          &:nth-child(even) {
-            //background-color: $body-container-background-color;
-          }
+          // &:nth-child(odd) {
+          //   background-color: $body-background-color;
+          // }
+          // &:nth-child(even) {
+          //   background-color: $body-container-background-color;
+          // }
         }
 
         .sv_q_title {
@@ -374,14 +374,14 @@ $base-line-height: 2em;
             //color: $error-color;
             padding: 1em;
 
-            & + input,
-            & + textarea,
-            & + .sv_select_wrapper select {
-              //border: 1px solid $error-color;
-              &:focus {
-                //outline: $error-color auto 5px;
-              }
-            }
+            // & + input,
+            // & + textarea,
+            // & + .sv_select_wrapper select {
+            //   border: 1px solid $error-color;
+            //   &:focus {
+            //     outline: $error-color auto 5px;
+            //   }
+            // }
           }
 
           .sv_q_other input,
@@ -531,9 +531,9 @@ $base-line-height: 2em;
             .sv_matrix_dynamic_button {
               padding: 0.3em 2em;
             }
-            tr {
-              //border-bottom: 1px solid $header-background-color;
-            }
+            // tr {
+            //   border-bottom: 1px solid $header-background-color;
+            // }
           }
           &.sv_q_matrix {
             td {
@@ -605,13 +605,13 @@ $base-line-height: 2em;
               }
             }
 
-            &.active {
-              .sv_q_rating_item_text {
-                //background-color: $main-hover-color;
-                //border-color: $main-hover-color;
-                //color: $body-background-color;
-              }
-            }
+            // &.active {
+            //   .sv_q_rating_item_text {
+            //     background-color: $main-hover-color;
+            //     border-color: $main-hover-color;
+            //     color: $body-background-color;
+            //   }
+            // }
             .sv_q_rating_item_text {
               display: inline-block;
               min-width: $base-line-height;
@@ -619,9 +619,9 @@ $base-line-height: 2em;
               margin-left: -1px;
               //border: 1px solid $header-background-color;
               text-align: center;
-              &:hover {
-                //border: 1px solid $main-color;
-              }
+              // &:hover {
+              //   border: 1px solid $main-color;
+              // }
             }
             &:not(:first-child) {
               .sv_q_rating_item_text:not(:hover) {

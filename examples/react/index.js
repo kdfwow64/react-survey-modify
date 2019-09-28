@@ -38,7 +38,7 @@ function init() {
               },
               {
                 "value": "Stretchy & Seamless",
-                "text": "Stretchy & Seamless",
+                "text": "Stretchy & Seamless Stretchy & Seamless Stretchy & Seamless Stretchy & Seamless",
                 "description": "Rock those tight pants",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
               },
@@ -46,6 +46,12 @@ function init() {
                 "value": "Lacy & Fancy",
                 "text": "Lacy & Fancy",
                 "description": "Look your best when you are half-naked",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              },
+              {
+                "value": "Fourth Item",
+                "text": "Fourth Item",
+                "description": "Look your best when you are half-nakedLook your best when you are half-naked Look your best when you are half-naked Look your best when you are half-naked",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
               }
             ]

@@ -1,13 +1,38 @@
 :root {
   --page-bg-color: rgb(245, 241, 237);
   --default-color: #3e306e;
+  /* height: -webkit-fill-available; */
 }
 
 
 body {
   margin: 0 !important;
   background-color: var(--page-bg-color);
+  height: 100% !important;
 }
+
+body .page_wrapper {
+  height: 100% !important;
+}
+
+body .page_wrapper .page_container {
+  height: 100% !important;
+}
+
+body .page_wrapper .page_container .main-content {
+  margin-top: -10px !important;
+}
+
+body .page_wrapper .page_container .main-content #surveyElement {
+  height: 100% !important;
+}
+
+body .page_wrapper .page_container .main-content #surveyElement .sv-main {
+  height: 100% !important;
+}
+
+
+
 .sv-row {
   overflow: hidden;
 }
@@ -223,8 +248,8 @@ body {
 }
 
 .image-no-description-checkbox-div >label img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .image-with-no-description-txt {
@@ -365,6 +390,7 @@ body {
 }
 .image-with-description-txt-div {
     float: left;
+    max-width: 250px;
 }
 .sv-question__title {
   white-space: unset;
