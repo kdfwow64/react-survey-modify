@@ -79,6 +79,7 @@ export class SurveyModel extends Base
   private textPreProcessor: TextPreProcessor;
   private completedStateValue: string = "";
   private completedStateTextValue: string = "";
+  public appLogo: string = "";
 
   private isTimerStarted: boolean = false;
   /**
@@ -813,6 +814,8 @@ export class SurveyModel extends Base
         this.clientId = jsonObj.clientId;
       }
       this.setJsonObject(jsonObj);
+      // console.log(jsonObj);
+      this.appLogo = jsonObj.appLogo;
       if (this.surveyId) {
         this.loadSurveyFromService(this.surveyId, this.clientId);
       }
@@ -828,6 +831,7 @@ export class SurveyModel extends Base
    * @see visiblePages
    */
   public get pages(): Array<PageModel> {
+    // console.log(this.pagesValue);
     return this.pagesValue;
   }
   /**
@@ -3061,6 +3065,7 @@ export class SurveyModel extends Base
   }
   private loadSurveyFromServiceJson(json: any) {
     if (!json) return;
+    console.log(json);
     this.setJsonObject(json);
     this.notifyAllQuestionsOnValueChanged();
     this.onLoadSurveyFromService();

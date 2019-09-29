@@ -79,6 +79,7 @@ export class Survey extends SurveyElementBase implements ISurveyCreator {
     };
     return (
       <div ref="root" className={this.css.root}>
+        <div className="fixed-logo" dangerouslySetInnerHTML={{ __html: this.survey.appLogo }} />
         <form onSubmit={onSubmit}>
           <div className="sv_custom_header" />
           <div className="sv_container">
@@ -166,6 +167,7 @@ export class Survey extends SurveyElementBase implements ISurveyCreator {
     );
   }
   protected renderSurvey(): JSX.Element {
+    // console.log("Render Survey", this.survey);
     var currentPage = this.survey.currentPage
       ? this.renderPage(this.survey.currentPage)
       : null;

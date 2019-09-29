@@ -17,18 +17,46 @@ function init() {
   };
   //Register the custom function
   Survey.FunctionFactory.Instance.register("getItemPrice", getItemPrice);
-
+  //https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058
   var json = {
-    "goNextPageAutomatic": true,
+    "appLogo": "<span>C/O </span>",
     "pages": [
+      // {
+      //   "name": "no description card",
+      //   "elements": [
+      //     {
+      //       "type": "radiogroup",
+      //       "name": "999",
+      //       "title": "When it comes to vitamins and supplements, you are:",
+      //       "description": "sdfasfda",
+      //       "choices": [
+      //         {
+      //           "value": "Comfy",
+      //           "text": "Comfy & Soft",
+      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+      //         },
+      //         {
+      //           "value": "Stretchy & Seamless",
+      //           "text": "Stretchy & Seamless Stretchy",
+      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+      //         },
+      //         {
+      //           "value": "Lacy & Fancy",
+      //           "text": "Lacy & Fancy",
+      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
       {
         "name": "style",
         "elements": [
           {
             "type": "radiogroup",
             "name": "q1",
-            "title": "How would you describe your \"heaven\" panty?",
-            "description": "",
+            "title": "When it comes to vitamins and supplements, you are:",
+            "description": "sdfasfda",
             "choices": [
               {
                 "value": "Comfy",
@@ -38,7 +66,7 @@ function init() {
               },
               {
                 "value": "Stretchy & Seamless",
-                "text": "Stretchy & Seamless Stretchy & Seamless Stretchy & Seamless Stretchy & Seamless",
+                "text": "Stretchy & Seamless Stretchy",
                 "description": "Rock those tight pants",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
               },
@@ -46,12 +74,6 @@ function init() {
                 "value": "Lacy & Fancy",
                 "text": "Lacy & Fancy",
                 "description": "Look your best when you are half-naked",
-                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
-              },
-              {
-                "value": "Fourth Item",
-                "text": "Fourth Item",
-                "description": "Look your best when you are half-nakedLook your best when you are half-naked Look your best when you are half-naked Look your best when you are half-naked",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
               }
             ]
@@ -69,48 +91,55 @@ function init() {
               {
                 "value": "2.first",
                 "text": "Classic Briefs",
-                "description": null,
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.second",
                 "text": "High Cut Briefs",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.third",
                 "text": "Control Briefs",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "3.fourth",
                 "text": "Hipsters",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.fifth",
                 "text": "Boyshorts",
-                "description": null,
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.sixth",
                 "text": "Bikinis",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.seventh",
                 "text": "Tangas",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "3.eighth",
                 "text": "G-Strings",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.ninth",
                 "text": "Thohgs",
+                "description": "",
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
             ]
