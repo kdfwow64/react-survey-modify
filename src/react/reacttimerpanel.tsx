@@ -21,6 +21,6 @@ export class SurveyTimerPanel extends React.Component<any, any> {
     this.survey = nextProps.survey;
   }
   render(): JSX.Element {
-    return <div>{this.survey.timerInfoText}</div>;
+    return <div className="timer-panel">{this.survey.timerInfoText}</div>;
   }
 }

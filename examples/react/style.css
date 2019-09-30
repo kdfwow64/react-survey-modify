@@ -163,6 +163,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 .sv-question__content {
   margin: auto;
   position: relative;
+  text-align: center;
 }
 
 .sv-question__title--answer {
@@ -524,6 +525,8 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 .sv-comment {
   padding: 15px;
   resize: none;
+  border-radius: 5px;
+  border:  3px solid var(--default-color) !important;
 }
 
 .sv-question--has-error div[role=alert] {
@@ -543,82 +546,119 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   font-size: 14px;
 }
 
+input[type=number].sv-text {
+  width: 500px;
+  background-color: white;
+  font-size: 31px;
+  padding: 18px 27px;
+  border-radius: 5px;
+  border:  3px solid var(--default-color) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.margin-top-150px {
+  margin-top: 150px;
+}
+
+.margin-top-100px {
+  margin-top: 100px;
+}
+
+.timer-panel {
+  display: none;
+}
+
+.img-static-page {
+  width: 80px;
+}
 @media only screen and (max-width: 600px) {
-
-    .page-panel {
-        display: block;
-    }
-    .sv-question__content {
-        margin: 0 auto;
-    }
-    .sv-selectbase__column {
-        margin-right: 4px;
-    }
-    .sv-body__page {
-      margin-top: 100px;
-    }
-    .image-checkbox-div >label img {
-        width: 64px;
-        height: 64px;
-    }
-    .image-checkbox-div {
-        width: calc(100% - 30px);
-        margin: 5px 12px;
-        float: left;
-    }
-    .image-div-checkbox {
-        float: left;
-        margin-right: 30px;
-        display: flex;
-    }
-
-    .image-no-description-checkbox-div .image-div-checkbox {
-        margin-right: 0;
-    }
-
-    .image-with-description-label-div {
-        margin: 15px;
-        float: left;
-        display: flex;
-        align-items: center;
-    }
-    .image-checkbox-big-txt {
-        float: left;
-        width: 100%;
-        text-align: left;
-        margin-top: 0px;
-        margin-bottom: 6.5px;
-    }
-
-    .image-checkbox-big-txt .check-element-width {
-      font-size: 16px;
-    }
-
-    .image-with-description-txt-div {
-        width: calc(100% - 95px);
-    }
-
-    .image-checkbox-div .image-checkbox-description {
-        float: left;
-        width: 100%;
-        text-align: left;
-        font-size: 13px;
-    }
-    .back-page-div span {
-        display: none;
-    }
-
-    .no-image-no-description-checkbox-div {
-      margin: 0;
-      width: calc(100% - 20px);
-    }
-
-    .sv-title  {
-      font-size: 21px !important;
-    }
-    .fixed-logo {
+  .page-panel {
+      display: block;
+  }
+  .sv-question__content {
+      margin: 0 auto;
+  }
+  .sv-selectbase__column {
+      margin-right: 4px;
+  }
+  .sv-body__page {
+    margin-top: 100px;
+  }
+  .image-checkbox-div >label img {
+      width: 64px;
       height: 64px;
-    }
+  }
+  .image-checkbox-div {
+      width: calc(100% - 30px);
+      margin: 5px 12px;
+      float: left;
+  }
+  .image-div-checkbox {
+      float: left;
+      margin-right: 30px;
+      display: flex;
+  }
+
+  .image-no-description-checkbox-div .image-div-checkbox {
+      margin-right: 0;
+  }
+
+  .image-with-description-label-div {
+      margin: 15px;
+      float: left;
+      display: flex;
+      align-items: center;
+  }
+  .image-checkbox-big-txt {
+      float: left;
+      width: 100%;
+      text-align: left;
+      margin-top: 0px;
+      margin-bottom: 6.5px;
+  }
+
+  .image-checkbox-big-txt .check-element-width {
+    font-size: 16px;
+  }
+
+  .image-with-description-txt-div {
+      width: calc(100% - 95px);
+  }
+
+  .image-checkbox-div .image-checkbox-description {
+      float: left;
+      width: 100%;
+      text-align: left;
+      font-size: 13px;
+  }
+  .back-page-div span {
+      display: none;
+  }
+
+  .no-image-no-description-checkbox-div {
+    margin: 0;
+    width: calc(100% - 20px);
+  }
+
+  .sv-title  {
+    font-size: 21px !important;
+  }
+  .fixed-logo {
+    height: 64px;
+  }
+  input[type=number].sv-text {
+    width: calc(100% - 20px);
+  }
 }
 
 @media only screen and (min-width: 768px) {

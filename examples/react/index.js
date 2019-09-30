@@ -20,7 +20,42 @@ function init() {
   //https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058
   var json = {
     "appLogo": "<span>C/O </span>",
+    showTimerPanel: "top",
     "pages": [
+      {
+        maxTimeToFinish: 2,
+        "name": "Just Text",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": '<div class="sv-question__header sv-question__header--top margin-top-150px"><h5 class="sv-title sv-question__title sv-question__title--required" title="Do "><span>Do not worry, it will be less than five minutes</span></h5></div>'
+         }
+        ]
+      },
+      {
+        maxTimeToFinish: 2,
+        "name": "Static Text with Image",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": '<div class="sv-question__header sv-question__header--top margin-top-100px"><h5 class="sv-title sv-question__title sv-question__title--required" title="Do "><span>Hey there!</span></h5> <img class="img-static-page" src="https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058"></div>'
+         }
+        ]
+      },
+      {
+        "name": "old are you",
+        "elements": [
+         {
+          "type": "text",
+          "name": "How old are you",
+          "isRequired": true,
+          "requiredErrorText": "Please input your age",
+          "inputType": "number"
+         }
+        ]
+      },
       {
         "name": "big circle text",
         "elements": [
@@ -277,7 +312,7 @@ function init() {
                 "text": "Large"
               },
               {
-                "value": "item3",
+                "value": "item4",
                 "text": "X Large"
               }
             ]
