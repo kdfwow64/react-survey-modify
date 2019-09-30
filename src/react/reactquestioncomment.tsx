@@ -33,19 +33,26 @@ export class SurveyQuestionComment extends SurveyQuestionElementBase {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
     return (
-      <textarea
-        id={this.question.inputId}
-        className={cssClasses.root}
-        readOnly={this.isDisplayMode}
-        value={this.state.value}
-        maxLength={this.question.getMaxLength()}
-        placeholder={this.question.placeHolder}
-        onBlur={this.handleOnBlur}
-        onChange={this.handleOnChange}
-        cols={this.question.cols}
-        rows={this.question.rows}
-        aria-label={this.question.locTitle.renderedHtml}
-      />
+      <div>
+        <div className="fixed-character-div">
+          {
+            this.state.value.length + " / " +this.question.getMaxLength() + " chars"
+          }
+        </div>
+        <textarea
+          id={this.question.inputId}
+          className={cssClasses.root}
+          readOnly={this.isDisplayMode}
+          value={this.state.value}
+          maxLength={this.question.getMaxLength()}
+          placeholder={this.question.placeHolder}
+          onBlur={this.handleOnBlur}
+          onChange={this.handleOnChange}
+          cols={this.question.cols}
+          rows={this.question.rows}
+          aria-label={this.question.locTitle.renderedHtml}
+        />
+      </div>
     );
   }
   private getStateValue(): any {

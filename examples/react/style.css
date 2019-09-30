@@ -161,7 +161,8 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   overflow: unset !important;
 }
 .sv-question__content {
-    margin: auto;
+  margin: auto;
+  position: relative;
 }
 
 .sv-question__title--answer {
@@ -456,6 +457,92 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   width: calc(50% - 35px);
   float: left;
 }
+
+.no-image-no-description-checkbox {
+    width: 25px;
+    height: 25px;
+    float: left;
+    border-radius: 25px;
+    margin-right: 10px;
+    border: 3px solid var(--page-bg-color);
+    transition-duration: 400ms;
+}
+
+.not-image:hover .no-image-no-description-checkbox {
+    border: 3px solid var(--default-color);
+}
+
+.checked .not-image .no-image-no-description-checkbox {
+    border: 3px solid var(--default-color);
+    background-color: var(--default-color);
+}
+.checked .not-image .no-image-no-description-checkbox:before {
+  content: "\f00c";
+  transform: scale(0);
+  transition-duration: 400ms;
+  transition-property: transform, -webkit-transform;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  color: white;
+  transition: all 1.75s ease;
+}
+
+.card-text {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+
+.dialog-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.dialog-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+
+.dialog-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.dialog-exit-active {
+  opacity: 0.01;
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+
+.sv-comment {
+  padding: 15px;
+  resize: none;
+}
+
+.sv-question--has-error div[role=alert] {
+  position: absolute;
+  bottom: 20px;
+  width: 600px;
+  padding-left: 25px;
+}
+
+.fixed-character-div {
+  position: absolute;
+  bottom: 10px;
+  margin: 8px 2px;
+  width: 600px;
+  text-align: right;
+  padding-right: 45px;
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .page-panel {
@@ -534,64 +621,36 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
     }
 }
 
-.no-image-no-description-checkbox {
-    width: 25px;
-    height: 25px;
-    float: left;
-    border-radius: 25px;
-    margin-right: 10px;
-    border: 3px solid var(--page-bg-color);
-    transition-duration: 400ms;
+@media only screen and (min-width: 768px) {
+  .sv-row__question--small:only-child {
+      max-width: unset;
+  }
+  .sv-comment {
+    margin: 10px;
+    width: 600px;
+    min-height: 200px;
+  }
 }
 
-.not-image:hover .no-image-no-description-checkbox {
-    border: 3px solid var(--default-color);
-}
+@media only screen and (max-width: 768px) {
+  .sv-comment {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  .fixed-character-div {
+    width: unset;
+    right: 14px;
+    padding-right: 0;
+  }
 
-.checked .not-image .no-image-no-description-checkbox {
-    border: 3px solid var(--default-color);
-    background-color: var(--default-color);
-}
-.checked .not-image .no-image-no-description-checkbox:before {
-  content: "\f00c";
-  transform: scale(0);
-  transition-duration: 400ms;
-  transition-property: transform, -webkit-transform;
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  color: white;
-  transition: all 1.75s ease;
-}
+  .sv-question--has-error .sv-question__content.page-panel {
+    position: relative;
+  }
 
-.card-text {
-  width: 150px !important;
-  height: 150px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center;
-}
-
-
-.dialog-enter {
-  opacity: 0.01;
-  transform: scale(1.1);
-}
-
-.dialog-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: all 300ms;
-}
-
-.dialog-exit {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.dialog-exit-active {
-  opacity: 0.01;
-  transform: scale(1.1);
-  transition: all 300ms;
+  .sv-question--has-error div[role=alert] {
+    left: 15px;
+    width: unset;
+    padding: 0;
+    bottom: 20px;
+  }
 }

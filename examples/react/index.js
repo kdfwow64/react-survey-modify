@@ -25,6 +25,19 @@ function init() {
         "name": "big circle text",
         "elements": [
           {
+            "type": "comment",
+            "name": "Free Text Area",
+            "isRequired": true,
+            "maxLength": 50,
+            "requiredErrorText": "Please enter a valid response",
+            "title": "Do you often consume 5 or more alcoholic drinks in a single day?",
+          }
+        ]
+      },
+      {
+        "name": "big circle text",
+        "elements": [
+          {
             "type": "radiogroup",
             "name": "big circle text",
             "title": "Do you often consume 5 or more alcoholic drinks in a single day?",
