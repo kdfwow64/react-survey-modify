@@ -219,6 +219,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 
 .check-element-width {
   white-space: normal;
+  display: inline-block;
   width: calc(100% - 45px);
 }
 
@@ -430,7 +431,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   text-align: center;
   max-width: 900px;
   display: table;
-  border-spacing: 15px;
+  border-spacing: 25px;
 }
 .sv-selectbase__item {
   display: inline-block;
@@ -443,7 +444,8 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   text-align: center !important;
   border-radius: 8px !important;
   border-width: 4px !important;
-  background-color: white;
+  display: table-cell;
+  /* background-color: white; */
   transition-duration: 700ms;
   border: 4px solid var(--page-bg-color);
 }
@@ -551,7 +553,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
     background-color: var(--default-color);
 }
 .checked .not-image .no-image-no-description-checkbox:before {
-    content: "\f00c";
+  content: "\f00c";
   transform: scale(0);
   transition-duration: 400ms;
   transition-property: transform, -webkit-transform;
@@ -559,6 +561,16 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   font-family: "Font Awesome 5 Free";
   color: white;
   transition: all 1.75s ease;
+}
+
+.card-text {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
 }
 
 

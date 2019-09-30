@@ -156,7 +156,11 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
       if (this.item.description) {
         itemClass += " image-checkbox-div";
       } else {
-        itemClass += " image-no-description-checkbox-div";
+        if (this.item.isCard) {
+          itemClass += " image-checkbox-div";
+        } else {
+          itemClass += " image-no-description-checkbox-div";
+        }
       }
     } else {
       itemClass += " no-image-no-description-checkbox-div";
@@ -224,6 +228,61 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
         {
           this.item.imageLink &&
           !this.item.description &&
+          this.item.isCard &&
+          <label className={this.cssClasses.label}>
+            <div className="image-with-description-label-div">
+              <div className="image-div-checkbox">
+                <img className="checkbox-image" src={this.item.imageLink} />
+              </div>
+              <input
+                className={this.cssClasses.itemControl}
+                id={id}
+                type="radio"
+                name={this.question.name + "_" + this.question.id}
+                checked={this.isChecked}
+                value={this.item.value}
+                disabled={this.isDisplayMode || !this.item.isEnabled}
+                onChange={this.handleOnChange}
+                aria-required={this.question.isRequired}
+                aria-label={locText.renderedHtml}
+              />
+              <svg
+                className={this.cssClasses.itemDecorator + " display-none"}
+                viewBox="-12 -12 24 24"
+              >
+                <circle r="6" cx="0" cy="0" />
+              </svg>
+              <span className={this.cssClasses.materialDecorator} />
+              <span className="check" />
+              <span
+                className={this.cssClasses.controlLabel + " display-none"}
+                title={locText["koRenderedHtml"]}
+              >
+                {itemText}
+              </span>
+              <div className="image-with-description-txt-div">
+                <div className="image-checkbox-big-txt">
+                  <span className="check-element-width">
+                    {
+                      locText.renderedHtml
+                    }
+                  </span>
+                </div>
+                <div className="image-checkbox-description">
+                  <span>
+                    {
+                      this.item.description
+                    }
+                  </span>
+                </div>
+              </div>
+            </div>
+          </label>
+        }
+        {
+          this.item.imageLink &&
+          !this.item.description &&
+          !this.item.isCard && 
           <label className={this.cssClasses.label}>
             <div className="image-no-description-checkbox-div">
               <div className="image-div-checkbox">
@@ -261,6 +320,7 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
         {
           this.item.imageLink &&
           !this.item.description &&
+          !this.item.isCard && 
           <span className="check-element-width">
             {
               locText.renderedHtml
@@ -270,6 +330,46 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
         {
           !this.item.imageLink &&
           !this.item.description &&
+          this.item.isCard &&
+          <label className={this.cssClasses.label + " not-image card-text"}>
+            {/* <div className="no-image-no-description-checkbox" /> */}
+            <input
+              className={this.cssClasses.itemControl}
+              id={id}
+              type="radio"
+              name={this.question.name + "_" + this.question.id}
+              checked={this.isChecked}
+              value={this.item.value}
+              disabled={this.isDisplayMode || !this.item.isEnabled}
+              onChange={this.handleOnChange}
+              aria-required={this.question.isRequired}
+              aria-label={locText.renderedHtml}
+            />
+            <svg
+              className={this.cssClasses.itemDecorator + " display-none"}
+              viewBox="-12 -12 24 24"
+            >
+              <circle r="6" cx="0" cy="0" />
+            </svg>
+            <span className={this.cssClasses.materialDecorator} />
+            <span className="check" />
+            <span
+              className={this.cssClasses.controlLabel + " display-none"}
+              title={locText["koRenderedHtml"]}
+            >
+              {itemText}
+            </span>
+            <span className="check-element-width">
+              {
+                locText.renderedHtml
+              }
+            </span>
+          </label>
+        }
+        {
+          !this.item.imageLink &&
+          !this.item.description &&
+          !this.item.isCard &&
           <label className={this.cssClasses.label + " not-image"}>
             <div className="no-image-no-description-checkbox" />
             <input

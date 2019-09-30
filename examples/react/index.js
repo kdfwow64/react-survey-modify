@@ -21,34 +21,63 @@ function init() {
   var json = {
     "appLogo": "<span>C/O </span>",
     "pages": [
-      // {
-      //   "name": "no description card",
-      //   "elements": [
-      //     {
-      //       "type": "radiogroup",
-      //       "name": "999",
-      //       "title": "When it comes to vitamins and supplements, you are:",
-      //       "description": "sdfasfda",
-      //       "choices": [
-      //         {
-      //           "value": "Comfy",
-      //           "text": "Comfy & Soft",
-      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
-      //         },
-      //         {
-      //           "value": "Stretchy & Seamless",
-      //           "text": "Stretchy & Seamless Stretchy",
-      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
-      //         },
-      //         {
-      //           "value": "Lacy & Fancy",
-      //           "text": "Lacy & Fancy",
-      //           "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        "name": "big circle text",
+        "elements": [
+          {
+            "type": "radiogroup",
+            "name": "big circle text",
+            "title": "Do you often consume 5 or more alcoholic drinks in a single day?",
+            "description": "",
+            "choices": [
+              {
+                "value": "yes",
+                "text": "Yes",
+                "isCard": true  //Is it Big Circle Text?
+              },
+              {
+                "value": "no",
+                "text": "No",
+                "isCard": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "no description card",
+        "elements": [
+          {
+            "type": "radiogroup",
+            "name": "999",
+            "title": "How often do you smoke",
+            "description": "sdfasfda",
+            "choices": [
+              {
+                "value": "Rarely",
+                "text": "Rarely",
+                "isCard": true,   // Is it Card Text without description
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+              },
+              {
+                "value": "Often",
+                "text": "Often",
+                "isCard": true,
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+              },
+              {
+                "value": "Sometime",
+                "text": "Sometime",
+                "isCard": true,
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              }
+            ]
+          }
+        ]
+      },
       {
         "name": "style",
         "elements": [
@@ -92,54 +121,63 @@ function init() {
                 "value": "2.first",
                 "text": "Classic Briefs",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.second",
                 "text": "High Cut Briefs",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.third",
                 "text": "Control Briefs",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "3.fourth",
                 "text": "Hipsters",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.fifth",
                 "text": "Boyshorts",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.sixth",
                 "text": "Bikinis",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.seventh",
                 "text": "Tangas",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "3.eighth",
                 "text": "G-Strings",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
               {
                 "value": "2.ninth",
                 "text": "Thohgs",
                 "description": "",
+                "isCard": false,
                 "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/cut-1.png"
               },
             ]
@@ -198,7 +236,7 @@ function init() {
                 "text": "Large"
               },
               {
-                "value": "item3",
+                "value": "item4",
                 "text": "X Large"
               }
             ]
