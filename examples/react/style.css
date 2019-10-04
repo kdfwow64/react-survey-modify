@@ -88,6 +88,15 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 .sv-question.left-slide {
    animation: slide 1s forwards;
 }
+.sv-row__question {
+  display: block;
+}
+/* .sv-row__question--small {
+  animation: move1 1s forwards;
+}
+.sv-row__question--small.left-slide {
+   animation: slide 1s forwards;
+} */
 
 .sv-main {
   background-color: var(--page-bg-color) !important;
@@ -201,12 +210,22 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 .image-checkbox-description span {
     white-space: normal;
 }
+
+.card-text {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
 .image-checkbox-div >label img{
   width: 140px;
   height: 140px;
 }
 
-.image-checkbox-div >label {
+.image-checkbox-div >label:not(.card-text) {
   height: unset !important;
   cursor: pointer;
   display: block !important;
@@ -488,15 +507,6 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   transition: all 1.75s ease;
 }
 
-.card-text {
-  width: 150px !important;
-  height: 150px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center;
-}
 
 
 .dialog-enter {
@@ -542,7 +552,6 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   margin: 8px 2px;
   width: 600px;
   text-align: right;
-  padding-right: 45px;
   font-size: 14px;
 }
 
@@ -663,7 +672,7 @@ input[type=number] {
 
 @media only screen and (min-width: 768px) {
   .sv-row__question--small:only-child {
-      max-width: unset;
+    /* max-width: 50%; */
   }
   .sv-comment {
     margin: 10px;

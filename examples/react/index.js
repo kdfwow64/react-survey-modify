@@ -20,7 +20,7 @@ function init() {
   //https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058
   var json = {
     "appLogo": "<span>C/O </span>",
-    showTimerPanel: "top",
+    // showTimerPanel: "top",
     "pages": [
       {
         maxTimeToFinish: 2,
@@ -34,6 +34,18 @@ function init() {
         ]
       },
       {
+        "name": "old are you",
+        "elements": [
+         {
+          "type": "text",
+          "name": "How old are you",
+          "isRequired": true,
+          "requiredErrorText": "Please input your age",
+          "inputType": "number"
+         }
+        ]
+      },
+      {
         maxTimeToFinish: 2,
         "name": "Static Text with Image",
         "elements": [
@@ -42,6 +54,40 @@ function init() {
           "name": "question1",
           "html": '<div class="sv-question__header sv-question__header--top margin-top-100px"><h5 class="sv-title sv-question__title sv-question__title--required" title="Do "><span>Hey there!</span></h5> <img class="img-static-page" src="https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058"></div>'
          }
+        ]
+      },
+      {
+        "name": "no description card",
+        "elements": [
+          {
+            "type": "radiogroup",
+            "name": "999",
+            "title": "How often do you smoke",
+            "description": "sdfasfda",
+            "choices": [
+              {
+                "value": "Rarely",
+                "text": "Rarely",
+                "isCard": true,   // Is it Card Text without description
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
+              },
+              {
+                "value": "Often",
+                "text": "Often",
+                "isCard": true,
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
+              },
+              {
+                "value": "Sometime",
+                "text": "Sometime",
+                "isCard": true,
+                "description": "",
+                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
+              }
+            ]
+          }
         ]
       },
       {

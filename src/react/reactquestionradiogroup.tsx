@@ -163,7 +163,8 @@ export class SurveyQuestionRadioItem extends ReactSurveyElement {
         }
       }
     } else {
-      itemClass += " no-image-no-description-checkbox-div";
+      // itemClass += " no-image-no-description-checkbox-div";
+      itemClass += " image-checkbox-div no-im-no-desc";
     }
 
     if (this.isChecked) itemClass += " checked";
