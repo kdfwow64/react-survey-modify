@@ -20,11 +20,11 @@ function init() {
   //https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058
   var json = {
     "appLogo": "<span>C/O </span>",
-    // showTimerPanel: "top",
+    showTimerPanel: "top",
     "pages": [
       {
         maxTimeToFinish: 2,
-        "name": "Just Text",
+        "name": "Don't worry",
         "elements": [
          {
           "type": "html",
@@ -34,7 +34,18 @@ function init() {
         ]
       },
       {
-        "name": "old are you",
+        maxTimeToFinish: 2,
+        "name": "Hey",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question1",
+          "html": '<div class="sv-question__header sv-question__header--top margin-top-100px"><h5 class="sv-title sv-question__title sv-question__title--required" title="Do "><span>Hey there!</span></h5> <img class="img-static-page" src="https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058"></div>'
+         }
+        ]
+      },
+      {
+        "name": "How old are you",
         "elements": [
          {
           "type": "text",
@@ -46,23 +57,12 @@ function init() {
         ]
       },
       {
-        maxTimeToFinish: 2,
-        "name": "Static Text with Image",
-        "elements": [
-         {
-          "type": "html",
-          "name": "question1",
-          "html": '<div class="sv-question__header sv-question__header--top margin-top-100px"><h5 class="sv-title sv-question__title sv-question__title--required" title="Do "><span>Hey there!</span></h5> <img class="img-static-page" src="https://cdn.shopify.com/s/files/1/0086/8184/8883/files/PASTEL_COLORS.png?2058"></div>'
-         }
-        ]
-      },
-      {
         "name": "no description card",
         "elements": [
           {
             "type": "radiogroup",
             "name": "999",
-            "title": "How often do you smoke",
+            "title": "Which one",
             "description": "sdfasfda",
             "choices": [
               {
@@ -91,27 +91,15 @@ function init() {
         ]
       },
       {
-        "name": "old are you",
-        "elements": [
-         {
-          "type": "text",
-          "name": "How old are you",
-          "isRequired": true,
-          "requiredErrorText": "Please input your age",
-          "inputType": "number"
-         }
-        ]
-      },
-      {
-        "name": "big circle text",
+        "name": "Free typing",
         "elements": [
           {
             "type": "comment",
             "name": "Free Text Area",
-            "isRequired": true,
+            // "isRequired": true,
             "maxLength": 50,
             "requiredErrorText": "Please enter a valid response",
-            "title": "Do you often consume 5 or more alcoholic drinks in a single day?",
+            "title": "Free typing",
           }
         ]
       },
@@ -133,40 +121,6 @@ function init() {
                 "value": "no",
                 "text": "No",
                 "isCard": true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "no description card",
-        "elements": [
-          {
-            "type": "radiogroup",
-            "name": "999",
-            "title": "How often do you smoke",
-            "description": "sdfasfda",
-            "choices": [
-              {
-                "value": "Rarely",
-                "text": "Rarely",
-                "isCard": true,   // Is it Card Text without description
-                "description": "",
-                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/comfy.png"
-              },
-              {
-                "value": "Often",
-                "text": "Often",
-                "isCard": true,
-                "description": "",
-                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/stretch.png"
-              },
-              {
-                "value": "Sometime",
-                "text": "Sometime",
-                "isCard": true,
-                "description": "",
-                "imageLink": "https://heavenpanty-assets.s3-us-west-2.amazonaws.com/lacy.png"
               }
             ]
           }

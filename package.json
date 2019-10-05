@@ -62,17 +62,17 @@
     "karma-webpack": "2.0.2",
     "knockout": "3.4.0",
     "live-server": "1.2.0",
-    "node-sass": "4.9.2",
+    "node-sass": "^4.12.0",
     "node-uuid": "1.4.7",
     "pegjs": "^0.10.0",
     "prettier": "~1.12.0",
     "puppeteer": "^1.0.0",
     "qunitjs": "2.2.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "16.8",
+    "react-dom": "16.8",
     "replace-in-file": "^3.1.1",
     "rimraf": "2.5.4",
-    "sass-loader": "4.1.1",
+    "sass-loader": "6.0.6",
     "standard-version": "4.0.0",
     "style-loader": "0.13.1",
     "surveyjs-doc-generator": "git+https://github.com/surveyjs/surveyjs-doc-generator.git",
@@ -90,7 +90,7 @@
     "vue-loader": "14.1.0",
     "vue-property-decorator": "4.0.0",
     "vue-template-compiler": "2.1.10",
-    "webpack": "2.2.1"
+    "webpack": "3.5.5"
   },
   "husky": {
     "hooks": {
