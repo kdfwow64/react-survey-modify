@@ -96,7 +96,7 @@ function init() {
           {
             "type": "comment",
             "name": "Free Text Area",
-            // "isRequired": true,
+            "isRequired": true,
             "maxLength": 50,
             "requiredErrorText": "Please enter a valid response",
             "title": "Free typing",
