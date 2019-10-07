@@ -52,7 +52,8 @@ function init() {
           "name": "How old are you",
           "isRequired": true,
           "requiredErrorText": "Please input your age",
-          "inputType": "number"
+          "inputType": "number",
+          "regEx": "aaaaaaaaaaaa"
          }
         ]
       },

@@ -26,9 +26,16 @@ export class SurveyQuestionText extends SurveyQuestionElementBase {
     this.question.value = event.target.value;
     this.setState({ value: this.getValue(this.question.value) });
   }
+  onKeyDown(e: any) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }
   render(): JSX.Element {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
+    console.log(this.question.getRegEx());
     return (
       <input
         id={this.question.inputId}
@@ -43,6 +50,7 @@ export class SurveyQuestionText extends SurveyQuestionElementBase {
         onChange={this.handleOnChange}
         aria-required={this.question.isRequired}
         aria-label={this.question.locTitle.renderedHtml}
+        onKeyDown={this.onKeyDown}
       />
     );
   }

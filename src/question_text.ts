@@ -48,6 +48,9 @@ export class QuestionTextModel extends Question {
   public set maxLength(val: number) {
     this.setPropertyValue("maxLength", val);
   }
+  public getRegEx(): string {
+    return this.getPropertyValue("regEx");
+  }
   public getMaxLength(): any {
     return Helpers.getMaxLength(
       this.maxLength,
