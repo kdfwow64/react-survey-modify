@@ -35,7 +35,6 @@ export class SurveyQuestionText extends SurveyQuestionElementBase {
   render(): JSX.Element {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
-    console.log(this.question.getRegEx());
     return (
       <input
         id={this.question.inputId}

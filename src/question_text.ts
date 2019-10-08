@@ -48,14 +48,22 @@ export class QuestionTextModel extends Question {
   public set maxLength(val: number) {
     this.setPropertyValue("maxLength", val);
   }
-  public getRegEx(): string {
-    return this.getPropertyValue("regEx");
-  }
   public getMaxLength(): any {
     return Helpers.getMaxLength(
       this.maxLength,
       this.survey ? this.survey.maxTextLength : -1
     );
+  }
+
+  /** Regular Expression */
+  public get regEx(): any {
+    return this.getPropertyValue("regEx");
+  }
+  public set regEx(val: any) {
+    this.setPropertyValue("regEx", val);
+  }
+  public getRegEx(): string {
+    return this.getPropertyValue("regEx");
   }
   /**
    * The text input size
@@ -123,6 +131,7 @@ Serializer.addClass(
         "week"
       ]
     },
+    { name: "regEx", default: "/^\d+$/" },
     { name: "size:number", default: 25 },
     { name: "maxLength:number", default: -1 },
     { name: "placeHolder", serializationProperty: "locPlaceHolder" }

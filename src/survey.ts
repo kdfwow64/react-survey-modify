@@ -1998,6 +1998,13 @@ export class SurveyModel extends Base
     return this.doCurrentPageComplete(false);
   }
   private hasErrorsOnNavigate(doComplete: boolean): boolean {
+    var ss = this.currentPage.questions[0];
+    if(ss.getType() == "text") {
+      var testReg = new RegExp(ss.regEx);
+      if (!testReg.test(ss.value))
+        return true;
+    }
+    
     if (this.ignoreValidation || !this.isEditMode) return false;
     if (this.isCurrentPageHasErrors) return true;
     return this.checkForAsyncQuestionValidation(doComplete);

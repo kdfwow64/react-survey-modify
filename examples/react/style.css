@@ -85,6 +85,16 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
+@keyframes move1 {
+  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+}
+
+@keyframes slide1 {
+  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+}
+
 .sv-question {
    animation: move 1s forwards;
 }
@@ -95,7 +105,12 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   display: block;
 }
 
-
+.sv-question.sv-row__question--small {
+  animation: move1 1s forwards;
+}
+.sv-question.sv-row__question--small.left-slide {
+  animation: slide1 1s forwards;
+}
 .sv-main {
   background-color: var(--page-bg-color) !important;
   padding: 0 !important;
@@ -448,7 +463,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 .sv-selectbase {
   text-align: center;
-  /* max-width: 900px; */
+  max-width: 900px;
   display: table;
   border-spacing: 25px;
 }
@@ -558,7 +573,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   /* left: 10px; */
 }
 
-input[type=number].sv-text {
+.sv-text {
   width: 500px;
   background-color: white;
   font-size: 31px;
@@ -574,8 +589,8 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+.sv-text {
+  -moz-appearance:textfield; /* Firefox */
 }
 
 .margin-top-150px {
@@ -673,12 +688,12 @@ input[type=number] {
   .fixed-logo {
     height: 64px;
   }
-  input[type=number].sv-text {
+  .sv-text {
     width: calc(100% - 20px);
   }
 }
 .sv-row__question--small:only-child {
-  max-width: unset !important;
+  max-width: 50% !important;
   margin-top: 75px;
 }
 @media only screen and (min-width: 768px) {

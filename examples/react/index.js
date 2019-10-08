@@ -45,19 +45,6 @@ function init() {
         ]
       },
       {
-        "name": "How old are you",
-        "elements": [
-         {
-          "type": "text",
-          "name": "How old are you",
-          "isRequired": true,
-          "requiredErrorText": "Please input your age",
-          "inputType": "number",
-          "regEx": "aaaaaaaaaaaa"
-         }
-        ]
-      },
-      {
         "name": "no description card",
         "elements": [
           {
@@ -89,6 +76,19 @@ function init() {
               }
             ]
           }
+        ]
+      },
+      {
+        "name": "How old are you",
+        "elements": [
+         {
+          "type": "text",
+          "name": "How old are you",
+          "isRequired": true,
+          "requiredErrorText": "Please input your age",
+          "inputType": "text",
+          "regEx": "[0-9]"
+         }
         ]
       },
       {
