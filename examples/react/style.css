@@ -76,22 +76,22 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 
 @keyframes move {
-  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
-  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+  from { margin-left: 100%; opacity: 0; }
+  to   { margin-left: 0; opacity: 1;}
 }
 
 @keyframes slide {
-  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
-  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+  from { margin-left: -100%; opacity: 0; }
+  to   { margin-left: 0; opacity: 1;}
 }
 
 @keyframes move1 {
-  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
-  to   { margin-left: 0; margin-right: 0; opacity: 1;}
+  from { margin-left: 100%; opacity: 0; }
+  to   { margin-left: 0; opacity: 1;}
 }
 
 @keyframes slide1 {
-  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
+  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
   to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
@@ -105,11 +105,8 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   display: block;
 }
 
-.sv-question.sv-row__question--small {
-  animation: move1 1s forwards;
-}
-.sv-question.sv-row__question--small.left-slide {
-  animation: slide1 1s forwards;
+.sv-text {
+  display: table-cell;
 }
 .sv-main {
   background-color: var(--page-bg-color) !important;
@@ -693,7 +690,8 @@ input::-webkit-inner-spin-button {
   }
 }
 .sv-row__question--small:only-child {
-  max-width: 50% !important;
+  max-width: 500% !important;
+  width: 200% !important;
   margin-top: 75px;
 }
 @media only screen and (min-width: 768px) {
