@@ -282,7 +282,9 @@ export class QuestionSelectBase extends Question {
     return this.renderedValueFromDataCore(val);
   }
   protected rendredValueToData(val: any): any {
+    console.log("=========Here is rendredValueToData function", val);
     if (this.getStoreOthersAsComment()) return val;
+    console.log("=========Here is rendredValueToData after getStoreOthersAsComment", val);
     return this.rendredValueToDataCore(val);
   }
   protected renderedValueFromDataCore(val: any): any {
@@ -291,6 +293,7 @@ export class QuestionSelectBase extends Question {
     return this.otherItem.value;
   }
   protected rendredValueToDataCore(val: any): any {
+    console.log("=========Here is rendredValueToDataCore function", val);
     if (val == this.otherItem.value && this.getComment()) {
       val = this.getComment();
     }

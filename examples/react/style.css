@@ -164,9 +164,9 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   /* align-items: center; */
   /* transition: all 1.75s ease; */
   margin-bottom: 80px;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   width: 100%;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .sv-question {

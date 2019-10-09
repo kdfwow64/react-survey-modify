@@ -290,34 +290,6 @@ function init() {
             ]
           }
         ]
-      },
-      {
-        "name": "Checkbox with no image4",
-        "elements": [
-          {
-            "type": "checkbox",
-            "name": "1In an average week, how often do you take powders?",
-            "description": "This is subTitle",
-            "choices": [
-              {
-                "value": "item1",
-                "text": "Small"
-              },
-              {
-                "value": "item2",
-                "text": "Meduim "
-              },
-              {
-                "value": "item3",
-                "text": "Large"
-              },
-              {
-                "value": "item4",
-                "text": "X Large"
-              }
-            ]
-          }
-        ]
       }
     ],
     "showProgressBar": "top",
