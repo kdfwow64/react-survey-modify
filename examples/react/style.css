@@ -76,13 +76,13 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 
 @keyframes move {
-  from { margin-left: 100%; opacity: 0; }
-  to   { margin-left: 0; opacity: 1;}
+  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
 @keyframes slide {
-  from { margin-left: -100%; opacity: 0; }
-  to   { margin-left: 0; opacity: 1;}
+  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
+  to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
 @keyframes move1 {
@@ -91,7 +91,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 
 @keyframes slide1 {
-  from { margin-left: 100%; margin-right: -100%; opacity: 0; }
+  from { margin-left: -100%; margin-right: 100%; opacity: 0; }
   to   { margin-left: 0; margin-right: 0; opacity: 1;}
 }
 
@@ -101,12 +101,8 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 .sv-question.left-slide {
    animation: slide 1s forwards;
 }
-.sv-row__question {
-  display: block;
-}
-
-.sv-text {
-  display: table-cell;
+.sv-question.sv-row__question--small {
+  animation: move1 1s forwards;
 }
 .sv-main {
   background-color: var(--page-bg-color) !important;
