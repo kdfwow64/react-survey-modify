@@ -448,7 +448,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 .sv-selectbase {
   text-align: center;
-  /* max-width: 900px; */
+  max-width: 900px;
   display: table;
   border-spacing: 25px;
 }
