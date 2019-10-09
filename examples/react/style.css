@@ -64,6 +64,9 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   margin: auto;
   margin-bottom: 30px;
   margin-top: 75px;
+  /* display: flex;
+    justify-content: center; */
+
 }
 
 .sv-description.sv-question__description {
@@ -150,12 +153,6 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 
 .checked .not-image {
   border-color: var(--default-color) !important;
-  transition-duration: 400ms;
-}
-
-.not-image:hover {
-  cursor: pointer;
-  border: 3px solid #3e306e;
   transition-duration: 400ms;
 }
 
@@ -289,11 +286,6 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   align-items: center !important;
   background-color: white;
   cursor: pointer;
-}
-
-.image-no-description-checkbox-div >label:hover {
-  border-color: var(--default-color) !important;
-  transition-duration: 400ms;
 }
 
 .image-no-description-checkbox-div.checked >label {
@@ -456,7 +448,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 }
 .sv-selectbase {
   text-align: center;
-  max-width: 900px;
+  /* max-width: 900px; */
   display: table;
   border-spacing: 25px;
 }
@@ -492,10 +484,6 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
     margin-right: 10px;
     border: 3px solid var(--page-bg-color);
     transition-duration: 400ms;
-}
-
-.not-image:hover .no-image-no-description-checkbox {
-    border: 3px solid var(--default-color);
 }
 
 .checked .not-image .no-image-no-description-checkbox {
@@ -601,6 +589,10 @@ input::-webkit-inner-spin-button {
 .img-static-page {
   width: 80px;
 }
+
+.card-text-width {
+  width: calc(50% - 35px) !important;
+}
 @media only screen and (max-width: 768px) {
   .page-panel {
       display: block;
@@ -622,6 +614,10 @@ input::-webkit-inner-spin-button {
       width: calc(100% - 30px);
       margin: 5px 12px;
       float: left;
+  }
+
+  .no-im-no-desc {
+    width: calc(100% - 35px);
   }
   .image-div-checkbox {
       float: left;
@@ -682,30 +678,17 @@ input::-webkit-inner-spin-button {
     height: 64px;
   }
   .sv-text {
-    width: calc(100% - 20px);
+    /* width: calc(100% - 20px); */
+    width: 355px;
   }
-}
-.sv-row__question--small:only-child {
-  max-width: 500% !important;
-  width: 200% !important;
-  margin-top: 75px;
-}
-@media only screen and (min-width: 768px) {
   .sv-comment {
     /* margin: 10px; */
-    width: 600px;
-    min-height: 200px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .sv-comment {
-    /* margin: 10px; */
-    width: calc(100% - 20px);
+    /* width: calc(100% - 20px); */
+    width: 355px;
   }
   .fixed-character-div {
     width: unset;
-    right: 14px;
+    left: 290px;
     padding-right: 0;
   }
 
@@ -717,5 +700,32 @@ input::-webkit-inner-spin-button {
     left: 20px;
     width: unset;
     padding: 0;
+  }
+}
+.sv-row__question--small:only-child {
+  max-width: 200% !important;
+  width: 200% !important;
+  margin-top: 75px;
+}
+@media only screen and (min-width: 768px) {
+  .sv-comment {
+    /* margin: 10px; */
+    width: 600px;
+    min-height: 200px;
+  }
+
+  .not-image:hover {
+    cursor: pointer;
+    border: 3px solid #3e306e;
+    transition-duration: 400ms;
+  }
+
+  .not-image:hover .no-image-no-description-checkbox {
+      border: 3px solid var(--default-color);
+  }
+
+  .image-no-description-checkbox-div >label:hover {
+    border-color: var(--default-color) !important;
+    transition-duration: 400ms;
   }
 }

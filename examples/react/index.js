@@ -99,7 +99,6 @@ function init() {
             "name": "Free Text Area",
             "isRequired": true,
             "maxLength": 50,
-            "requiredErrorText": "Please enter a valid response",
             "title": "Free typing",
           }
         ]
