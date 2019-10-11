@@ -487,6 +487,15 @@ export class PanelModelBase extends SurveyElement
             rec.firstErrorQuestion = question;
           }
           rec.result = true;
+        } else {
+          if(question.getType() == "text") {
+            var testReg = new RegExp(question.regEx);
+            if (!testReg.test(question.value) || !question.value) {
+              rec.firstErrorQuestion = question;
+              rec.firstErrorQuestion.focus(false);
+              rec.result = true;
+            }
+          }
         }
       }
     }

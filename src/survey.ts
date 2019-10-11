@@ -1999,17 +1999,12 @@ export class SurveyModel extends Base
     var ss = this.currentPage.questions[0];
     if(ss.getType() == "text") {
       var testReg = new RegExp(ss.regEx);
-      console.log("------------text");
-      console.log(ss);
       if (!testReg.test(ss.value) || !ss.value) {
         this.currentPage.css.question.errorComment = "empty-comment-check";
-        return true;
       }
     }
 
     if (ss.getType() == "comment") {
-      console.log("=============comment");
-      console.log(ss);
       this.currentPage.css.question.errorComment = "empty-comment-check";
     }
 
@@ -2027,6 +2022,14 @@ export class SurveyModel extends Base
           this.onCompletedAsyncQuestionValidators(doComplete, hasErrors);
         };
         this.asyncValidationQuesitons.push(questions[i]);
+      }
+    }
+    var ss = this.currentPage.questions[0];
+    if (ss.getType() == "text") {
+      var testReg = new RegExp(ss.regEx);
+      if (!testReg.test(ss.value) || !ss.value) {
+        this.currentPage.css.question.errorComment = "empty-comment-check";
+        return true;
       }
     }
     return this.asyncValidationQuesitons.length > 0;
@@ -2073,7 +2076,9 @@ export class SurveyModel extends Base
     return res;
   }
   private fireValidatedErrorsOnCurrentPage() {
+    console.log("fireValidatedErrorsOnCurrentPage");
     if (this.onValidatedErrorsOnCurrentPage.isEmpty) return;
+    console.log("-------------------------");
     var questionsOnPage = this.currentPage.questions;
     var questions = new Array<Question>();
     var errors = new Array<SurveyError>();
@@ -2086,6 +2091,7 @@ export class SurveyModel extends Base
         }
       }
     }
+    console.log("=======Errors", errors);
     this.onValidatedErrorsOnCurrentPage.fire(this, {
       questions: questions,
       errors: errors
@@ -2120,6 +2126,8 @@ export class SurveyModel extends Base
   }
   protected doCurrentPageComplete(doComplete: boolean): boolean {
     if (this.hasErrorsOnNavigate(doComplete)) return false;
+    this.currentPage.css.question.errorComment = "hide_blank";
+    console.log("Complete");
     return this.doCurrentPageCompleteCore(doComplete);
   }
   private doCurrentPageCompleteCore(doComplete: boolean): boolean {
@@ -3346,7 +3354,6 @@ export class SurveyModel extends Base
       !this.currentPage
     )
       return;
-    console.log("Trying go next page");
     var ss = this.currentPage.questions[0];
     if (ss.getType() == "text" || ss.getType() == "comment")
       return;

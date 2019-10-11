@@ -720,6 +720,18 @@ input::-webkit-inner-spin-button {
   width: fit-content;
   margin: auto;
 }
+
+
+@media only screen and (max-width: 380px) {
+  .sv-text {
+    width: 300px;
+  }
+
+  .sv-comment {
+    width: 300px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .sv-comment {
     /* margin: 10px; */

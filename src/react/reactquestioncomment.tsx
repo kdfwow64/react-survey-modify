@@ -33,7 +33,6 @@ export class SurveyQuestionComment extends SurveyQuestionElementBase {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
     var mainCSS = cssClasses.errorComment + " comment-main-div";
-    console.log(this.question);
     return (
       <div className={mainCSS}>
         <div className="fixed-character-div">
