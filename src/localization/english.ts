@@ -19,7 +19,7 @@ export var englishStrings = {
   loadingSurvey: "Loading Survey...",
   optionsCaption: "Choose...",
   value: "value",
-  requiredError: "Please answer the question.",
+  requiredError: "",
   requiredErrorInPanel: "Please answer at least one question.",
   requiredInAllRowsError: "Please answer questions in all rows.",
   numericError: "The value should be numeric.",

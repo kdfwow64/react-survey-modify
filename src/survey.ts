@@ -2076,9 +2076,7 @@ export class SurveyModel extends Base
     return res;
   }
   private fireValidatedErrorsOnCurrentPage() {
-    console.log("fireValidatedErrorsOnCurrentPage");
     if (this.onValidatedErrorsOnCurrentPage.isEmpty) return;
-    console.log("-------------------------");
     var questionsOnPage = this.currentPage.questions;
     var questions = new Array<Question>();
     var errors = new Array<SurveyError>();
@@ -2091,7 +2089,6 @@ export class SurveyModel extends Base
         }
       }
     }
-    console.log("=======Errors", errors);
     this.onValidatedErrorsOnCurrentPage.fire(this, {
       questions: questions,
       errors: errors

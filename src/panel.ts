@@ -424,7 +424,13 @@ export class PanelModelBase extends SurveyElement
     };
     this.hasErrorsCore(rec);
     if (rec.firstErrorQuestion) {
-      rec.firstErrorQuestion.focus(true);
+      if (rec.firstErrorQuestion.getType() == "text") {
+        rec.firstErrorQuestion.focus(false);
+        console.log("no focus");
+      } else {
+        rec.firstErrorQuestion.focus(true);
+        console.log("focus");
+      }
     }
     return rec.result;
   }
