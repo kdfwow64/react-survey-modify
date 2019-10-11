@@ -49,6 +49,7 @@ export var bemCss = {
   pageDescription: "sv-description sv-page__description",
   row: "sv-row",
   question: {
+    errorComment: "hide_blank",
     mainRoot: "sv-question sv-row__question",
     flowRoot: "sv-question sv-row__question sv-row__question--flow",
     asCell: "sv-table__cell",

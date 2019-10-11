@@ -48,7 +48,7 @@ function init() {
         "name": "no description card",
         "elements": [
           {
-            "type": "radiogroup",
+            "type": "checkbox",
             "name": "999",
             "title": "Which one",
             "description": "sdfasfda",
@@ -85,7 +85,8 @@ function init() {
           "type": "text",
           "name": "How old are you",
           "isRequired": true,
-          "requiredErrorText": "Please input your age",
+          "requiredErrorText": "",
+          "errorText": "Invalid Input",
           "inputType": "text",
           "regEx": "[0-9]"
          }
@@ -99,6 +100,8 @@ function init() {
             "name": "Free Text Area",
             "isRequired": true,
             "maxLength": 50,
+            "requiredErrorText": "",
+            "errorText": "This input can not be empty",
             "title": "Free typing",
           }
         ]

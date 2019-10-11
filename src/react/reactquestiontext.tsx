@@ -35,22 +35,36 @@ export class SurveyQuestionText extends SurveyQuestionElementBase {
   render(): JSX.Element {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
+    var mainCSS = cssClasses.errorComment + " comment-main-div";
+    var testReg = new RegExp(this.question.getRegEx());
+    var flag = false;
+    if (testReg.test(this.state.value)) {
+      flag = true;
+    }
     return (
-      <input
-        id={this.question.inputId}
-        disabled={this.isDisplayMode}
-        className={cssClasses.root}
-        type={this.question.inputType}
-        value={this.state.value}
-        maxLength={this.question.getMaxLength()}
-        size={this.question.size}
-        placeholder={this.question.placeHolder}
-        onBlur={this.handleOnBlur}
-        onChange={this.handleOnChange}
-        aria-required={this.question.isRequired}
-        aria-label={this.question.locTitle.renderedHtml}
-        onKeyDown={this.onKeyDown}
-      />
+      <div className={mainCSS}>
+        <div className="fixed-error-div">
+          {
+            !flag &&
+            this.question.getErrorText()
+          }
+        </div>
+        <input
+          id={this.question.inputId}
+          disabled={this.isDisplayMode}
+          className={cssClasses.root}
+          type={this.question.inputType}
+          value={this.state.value}
+          maxLength={this.question.getMaxLength()}
+          size={this.question.size}
+          placeholder={this.question.placeHolder}
+          onBlur={this.handleOnBlur}
+          onChange={this.handleOnChange}
+          aria-required={this.question.isRequired}
+          aria-label={this.question.locTitle.renderedHtml}
+          onKeyDown={this.onKeyDown}
+        />
+      </div>
     );
   }
   private getValue(val: any): any {

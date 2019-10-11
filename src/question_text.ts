@@ -65,6 +65,16 @@ export class QuestionTextModel extends Question {
   public getRegEx(): string {
     return this.getPropertyValue("regEx");
   }
+  /** Regular Expression */
+  public get errorText(): any {
+    return this.getPropertyValue("errorText");
+  }
+  public set errorText(val: any) {
+    this.setPropertyValue("errorText", val);
+  }
+  public getErrorText(): string {
+    return this.getPropertyValue("errorText");
+  }
   /**
    * The text input size
    */
@@ -132,6 +142,7 @@ Serializer.addClass(
       ]
     },
     { name: "regEx", default: "/^\d+$/" },
+    { name: "errorText", default: "Input Valid answer" },
     { name: "size:number", default: 25 },
     { name: "maxLength:number", default: -1 },
     { name: "placeHolder", serializationProperty: "locPlaceHolder" }

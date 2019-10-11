@@ -32,13 +32,21 @@ export class SurveyQuestionComment extends SurveyQuestionElementBase {
   render(): JSX.Element {
     if (!this.question) return null;
     var cssClasses = this.question.cssClasses;
+    var mainCSS = cssClasses.errorComment + " comment-main-div";
+    console.log(this.question);
     return (
-      <div>
+      <div className={mainCSS}>
         <div className="fixed-character-div">
           {
             this.state.value.length + " / " +this.question.getMaxLength() + " chars"
           }
         </div>
+        {
+          this.state.value.length === 0 &&
+          <div className="fixed-error-div">
+            {this.question.getErrorText()}
+          </div>
+        }
         <textarea
           id={this.question.inputId}
           className={cssClasses.root}

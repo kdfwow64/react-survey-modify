@@ -29,6 +29,16 @@ export class QuestionCommentModel extends Question {
       this.survey ? this.survey.maxTextLength : -1
     );
   }
+  /** Regular Expression */
+  public get errorText(): any {
+    return this.getPropertyValue("errorText");
+  }
+  public set errorText(val: any) {
+    this.setPropertyValue("errorText", val);
+  }
+  public getErrorText(): string {
+    return this.getPropertyValue("errorText");
+  }
   /**
    * Use this property to set the input place holder.
    */
@@ -70,6 +80,7 @@ Serializer.addClass(
   "comment",
   [
     { name: "maxLength:number", default: -1 },
+    { name: "errorText", default: "Input Valid answer" },
     { name: "cols:number", default: 50 },
     { name: "rows:number", default: 4 },
     { name: "placeHolder", serializationProperty: "locPlaceHolder" }

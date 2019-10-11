@@ -814,7 +814,6 @@ export class SurveyModel extends Base
         this.clientId = jsonObj.clientId;
       }
       this.setJsonObject(jsonObj);
-      // console.log(jsonObj);
       this.appLogo = jsonObj.appLogo;
       if (this.surveyId) {
         this.loadSurveyFromService(this.surveyId, this.clientId);
@@ -831,7 +830,6 @@ export class SurveyModel extends Base
    * @see visiblePages
    */
   public get pages(): Array<PageModel> {
-    // console.log(this.pagesValue);
     return this.pagesValue;
   }
   /**
@@ -2001,10 +1999,20 @@ export class SurveyModel extends Base
     var ss = this.currentPage.questions[0];
     if(ss.getType() == "text") {
       var testReg = new RegExp(ss.regEx);
-      if (!testReg.test(ss.value))
+      console.log("------------text");
+      console.log(ss);
+      if (!testReg.test(ss.value) || !ss.value) {
+        this.currentPage.css.question.errorComment = "empty-comment-check";
         return true;
+      }
     }
-    
+
+    if (ss.getType() == "comment") {
+      console.log("=============comment");
+      console.log(ss);
+      this.currentPage.css.question.errorComment = "empty-comment-check";
+    }
+
     if (this.ignoreValidation || !this.isEditMode) return false;
     if (this.isCurrentPageHasErrors) return true;
     return this.checkForAsyncQuestionValidation(doComplete);
@@ -2092,6 +2100,11 @@ export class SurveyModel extends Base
     var vPages = this.visiblePages;
     var index = vPages.indexOf(this.currentPage);
     this.currentPage = vPages[index - 1];
+    if (this.currentPage.elements[0].getType() == 'radiogroup') {
+      this.currentPage.elements[0].renderedValue = null;
+      this.currentPage.elements[0].value = null;
+      this.currentPage.elements[0].cachedValueForUrlRequests = null;
+    }
     if (this.currentPage.css.question.mainRoot.indexOf("left-slide") === -1) {
       this.currentPage.css.question.mainRoot += " left-slide";
     }
@@ -3072,7 +3085,6 @@ export class SurveyModel extends Base
   }
   private loadSurveyFromServiceJson(json: any) {
     if (!json) return;
-    console.log(json);
     this.setJsonObject(json);
     this.notifyAllQuestionsOnValueChanged();
     this.onLoadSurveyFromService();
@@ -3333,6 +3345,10 @@ export class SurveyModel extends Base
       !this.goNextPageAutomatic ||
       !this.currentPage
     )
+      return;
+    console.log("Trying go next page");
+    var ss = this.currentPage.questions[0];
+    if (ss.getType() == "text" || ss.getType() == "comment")
       return;
     var question = <Question>this.getQuestionByValueName(name);
     if (
