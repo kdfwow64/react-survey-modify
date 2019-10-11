@@ -4,7 +4,11 @@
   /* height: -webkit-fill-available; */
 }
 
-
+footer {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--page-bg-color) !important;
+}
 body {
   margin: 0 !important;
   background-color: var(--page-bg-color);
