@@ -21,7 +21,6 @@ body .page_wrapper {
 
 body .page_wrapper .page_container {
   height: 100% !important;
-  margin-top: -10px;
 }
 
 body .page_wrapper .page_container .main-content {
