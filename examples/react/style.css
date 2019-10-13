@@ -526,6 +526,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   padding: 15px;
   resize: none;
   border-radius: 5px;
+  font-size: 25px;
   border:  3px solid var(--default-color) !important;
 }
 
@@ -545,15 +546,18 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
   bottom: 10px;
   font-size: 14px;
   right: 10px;
+  z-index: 10;
 }
 
 .sv-text {
-  width: 500px;
-  background-color: white;
-  font-size: 31px;
-  padding: 18px 27px;
+  width: 500px !important;
+  background-color: white !important;
+  font-size: 31px !important;
+  height: 70px !important;
+  padding: 18px 27px !important;
   border-radius: 5px;
   border:  3px solid var(--default-color) !important;
+  -moz-appearance:textfield; /* Firefox */
 }
 
 input::-webkit-outer-spin-button,
@@ -561,10 +565,6 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-.sv-text {
-  -moz-appearance:textfield; /* Firefox */
 }
 
 .margin-top-150px {
@@ -696,7 +696,7 @@ input::-webkit-inner-spin-button {
   }
   .sv-text {
     /* width: calc(100% - 20px); */
-    width: 355px;
+    width: 355px !important;
   }
   .sv-comment {
     /* margin: 10px; */
@@ -729,7 +729,7 @@ input::-webkit-inner-spin-button {
 
 @media only screen and (max-width: 380px) {
   .sv-text {
-    width: 300px;
+    width: 300px !important;
   }
 
   .sv-comment {

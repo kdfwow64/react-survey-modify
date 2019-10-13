@@ -48,10 +48,11 @@ function init() {
         "name": "no description card",
         "elements": [
           {
-            "type": "checkbox",
+            "type": "radiogroup",
             "name": "999",
             "title": "Which one",
             "description": "sdfasfda",
+            "isRequired": true,
             "choices": [
               {
                 "value": "Rarely",
