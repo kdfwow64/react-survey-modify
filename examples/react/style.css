@@ -23,15 +23,13 @@ body .page_wrapper .page_container {
   height: 100% !important;
 }
 
-body .page_wrapper .page_container .main-content {
+
+#surveyElement {
+  height: 100% !important;
   margin-top: -10px !important;
 }
 
-body .page_wrapper .page_container .main-content #surveyElement {
-  height: 100% !important;
-}
-
-body .page_wrapper .page_container .main-content #surveyElement .sv-main {
+#surveyElement .sv-main {
   height: 100% !important;
 }
 
@@ -542,7 +540,7 @@ body .page_wrapper .page_container .main-content #surveyElement .sv-main {
 
 .fixed-character-div {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   font-size: 14px;
   right: 10px;
   z-index: 10;
@@ -587,8 +585,9 @@ input::-webkit-inner-spin-button {
 }
 
 .fixed-error-div {
+  z-index: 1;
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   font-size: 14px;
   left: 10px;
   color: red;
